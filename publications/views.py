@@ -5,6 +5,7 @@ from django.contrib.messages.views import SuccessMessageMixin
 from django.views.generic import CreateView, UpdateView, DetailView
 from .choices import JOURNAL_STATUS, JOURNAL_TYPE
 from django.urls import reverse_lazy
+from django.contrib import messages
 
 # Create your views here.
 def journals(request):
@@ -67,7 +68,7 @@ def journal_update(request, pk):
         
         if form.is_valid():
             form.save()
-            # messages.add_message(request, messages.SUCCESS, 'Update Successful')
+            messages.add_message(request, messages.SUCCESS, 'Update Successful')
             return redirect('publications:journals')
     else:
         form = JournalUpdateForm(instance=journal)
