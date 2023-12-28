@@ -1,6 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404, redirect
 from .models import Journal
-from .forms import JournalForm
+from .forms import JournalForm, JournalUpdateForm
 from django.contrib.messages.views import SuccessMessageMixin
 from django.views.generic import CreateView, UpdateView, DetailView
 from .choices import JOURNAL_STATUS, JOURNAL_TYPE
@@ -57,3 +57,23 @@ class JournalCreateView(SuccessMessageMixin, CreateView):
     def form_valid(self, form):
         form.instance.writer = self.request.user  # Set the writer to the current user
         return super().form_valid(form)
+
+
+def journal_update(request, pk):
+    journal = get_object_or_404(Journal, pk=pk)
+
+    if request.method == 'POST':
+        form = JournalUpdateForm(request.POST, request.FILES, instance=journal)
+        
+        if form.is_valid():
+            form.save()
+            # messages.add_message(request, messages.SUCCESS, 'Update Successful')
+            return redirect('publications:journals')
+    else:
+        form = JournalUpdateForm(instance=journal)
+
+    context = {
+        'form': form,
+    }
+
+    return render(request, 'publications/journals/update.html', context)

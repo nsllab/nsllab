@@ -33,15 +33,15 @@
               
               
             </td>
-            {% if user.is_authenticated %}
+            
             <td>
               <a
-                href=""
+                href="{% url 'publications:journal_update' pk=journal.pk %}""
                 class="btn btn-outline-info"
                 >Edit</a
               >
             </td>
-            {% endif %}
+            
           </tr>
           
 
@@ -101,7 +101,14 @@
                 <i class="fa-solid fa-magnifying-glass"></i>Search
               </button>
             </div>
+            <div class="d-grid gap-2">
+                <a href="{% url 'publications:journals' %}" class="btn btn-outline-info">
+                  <i class="fa-solid fa-magnifying-glass"></i>Clear Search
+                </a>
+              </div>
           </form>
+          
+          
         </div>
       </div>
     </div>
