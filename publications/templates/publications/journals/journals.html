@@ -105,14 +105,12 @@
 </div>
 
 
-{% if user.is_authenticated %}
 <div class="position-fixed bottom-0 end-0 p-3">
-	<a href="" class="btn btn-outline-info" type="button">
+	<a href="{% url 'publications:journal_create' %}" class="btn btn-outline-info" type="button">
 	  <i class="fa-solid fa-magnifying-glass"></i>Create New
 	  <!-- Bootstrap Icons -->
 	</a>
   </div>
-{% endif %}
 
 
 

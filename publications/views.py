@@ -1,6 +1,10 @@
 from django.shortcuts import render
 from .models import Journal
+from .forms import JournalForm
+from django.contrib.messages.views import SuccessMessageMixin
+from django.views.generic import CreateView, UpdateView, DetailView
 from .choices import JOURNAL_STATUS, JOURNAL_TYPE
+from django.urls import reverse_lazy
 
 # Create your views here.
 def journals(request):
@@ -41,3 +45,15 @@ def journals(request):
         'status': JOURNAL_STATUS,
     }
     return render(request, 'publications/journals/journals.html', context)
+
+
+class JournalCreateView(SuccessMessageMixin, CreateView):
+    model = Journal
+    form_class = JournalForm  # Replace with your actual form
+    template_name = 'publications/journals/create.html'  # Replace with your template name
+    success_url = reverse_lazy('publications:journals')  # Replace with your success URL
+    success_message =  "%(journal_name)s created successfully"
+
+    def form_valid(self, form):
+        form.instance.writer = self.request.user  # Set the writer to the current user
+        return super().form_valid(form)
