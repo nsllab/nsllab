@@ -1,0 +1,206 @@
+[
+  {
+    "model": "publications.journal",
+    "pk": 611,
+    "fields": {
+      "title": "Sanjay Bhardwaj and Dong-Seong Kim,&#34;Priority-Aware Two-Phase MAC Scheduling for Ultra-Reliable Low-Latency Communications in IEEE 802.11ax-Based Industrial Wireless Networks&#34;, wireless personal Communication, 2020. (S)",
+      "journal_name": "Sanjay Bhardwaj and Dong-Seong Kim,&#34;Priority-Aware Two-Phase MAC Scheduling for Ultra-Reliable Low-Latency Communications in IEEE 802.11ax-Based Industrial Wireless Networks&#34;, wireless personal Communication, 2020. (S)",
+      "status": null,
+      "journal_type": 1,
+      "write_date": "2019-12-28 16:32:41",
+      "update_date": "2020-05-06 15:54:36",
+      "visit": 731,
+      "ack": null,
+      "pub_year": null,
+      "extras": null,
+      "all_authors": "Sanjay Bhardwaj and Dong-Seong Kim,&#34;Priority-Aware Two-Phase MAC Scheduling for Ultra-Reliable Low-Latency Communications in IEEE 802.11ax-Based Industrial Wireless Networks&#34;, wireless personal Communication, 2020. (S)"
+    }
+  },
+  {
+    "model": "publications.journal",
+    "pk": 612,
+    "fields": {
+      "title": "Riesa Krisna Astuti Sakir, Muhammad Rusyadi Ramli, and Doeng-Song Kim, &#34;Deep Reinforcement Learning for Traffic Signal Optimization in Edge-based Traffic Control System&#34;, ELSEVIER Computers and Electrical Engineering, 2019 (In revision)",
+      "journal_name": "Riesa Krisna Astuti Sakir, Muhammad Rusyadi Ramli, and Doeng-Song Kim, &#34;Deep Reinforcement Learning for Traffic Signal Optimization in Edge-based Traffic Control System&#34;, ELSEVIER Computers and Electrical Engineering, 2019 (In revision)",
+      "status": 3,
+      "journal_type": 1,
+      "write_date": "2019-09-20 14:01:42",
+      "update_date": "2019-12-26 22:53:07",
+      "visit": 2075,
+      "ack": null,
+      "pub_year": null,
+      "extras": null,
+      "all_authors": "Riesa Krisna Astuti Sakir, Muhammad Rusyadi Ramli, and Doeng-Song Kim, &#34;Deep Reinforcement Learning for Traffic Signal Optimization in Edge-based Traffic Control System&#34;, ELSEVIER Computers and Electrical Engineering, 2019 (In revision)"
+    }
+  },
+  {
+    "model": "publications.journal",
+    "pk": 613,
+    "fields": {
+      "title": "Seung-Hwan Kim, Jae-Woo Kim, Williams-Paul Nwadiugwu and Dong-Seong Kim, &#34;Deep Learning-based Robust Automatic Modulation Classification for Cognitive Radio Networks&#34;, IEEE Wireless Communications Letters, (IF: 4.660), 2020. (R)",
+      "journal_name": "Seung-Hwan Kim, Jae-Woo Kim, Williams-Paul Nwadiugwu and Dong-Seong Kim, &#34;Deep Learning-based Robust Automatic Modulation Classification for Cognitive Radio Networks&#34;, IEEE Wireless Communications Letters, (IF: 4.660), 2020. (R)",
+      "status": 2,
+      "journal_type": 1,
+      "write_date": "2020-12-24 10:35:45",
+      "update_date": "2021-05-06 10:06:08",
+      "visit": 569,
+      "ack": null,
+      "pub_year": null,
+      "extras": null,
+      "all_authors": "Seung-Hwan Kim, Jae-Woo Kim, Williams-Paul Nwadiugwu and Dong-Seong Kim, &#34;Deep Learning-based Robust Automatic Modulation Classification for Cognitive Radio Networks&#34;, IEEE Wireless Communications Letters, (IF: 4.660), 2020. (R)"
+    }
+  },
+  {
+    "model": "publications.journal",
+    "pk": 614,
+    "fields": {
+      "title": "V. S. Doan, H. T. Dang, D. S. Kim: &#34;A Survey on Direction of Arrival Estimation Methods for Internet of Battlefield Things&#34;, IEEE Internet of Things Journal (IF: 9.5, Pr)",
+      "journal_name": "V. S. Doan, H. T. Dang, D. S. Kim: &#34;A Survey on Direction of Arrival Estimation Methods for Internet of Battlefield Things&#34;, IEEE Internet of Things Journal (IF: 9.5, Pr)",
+      "status": 1,
+      "journal_type": 1,
+      "write_date": "2019-10-01 18:01:37",
+      "update_date": null,
+      "visit": 1154,
+      "ack": null,
+      "pub_year": null,
+      "extras": null,
+      "all_authors": "V. S. Doan, H. T. Dang, D. S. Kim: &#34;A Survey on Direction of Arrival Estimation Methods for Internet of Battlefield Things&#34;, IEEE Internet of Things Journal (IF: 9.5, Pr)"
+    }
+  },
+  {
+    "model": "publications.journal",
+    "pk": 615,
+    "fields": {
+      "title": "V. S. Doan and D. S. Kim, &#34;DOA Estimation of Multiple Non-coherent and coherent Signals Using Element Transposition of Covariance Matrix&#34;, ICT Express, vol. 6, no. 2, pp. 67-75, June 2020. DOI : doi.org/10.1016/j.icte.2020.03.008",
+      "journal_name": "V. S. Doan and D. S. Kim, &#34;DOA Estimation of Multiple Non-coherent and coherent Signals Using Element Transposition of Covariance Matrix&#34;, ICT Express, vol. 6, no. 2, pp. 67-75, June 2020. DOI : doi.org/10.1016/j.icte.2020.03.008",
+      "status": 4,
+      "journal_type": 1,
+      "write_date": "2019-11-11 16:45:09",
+      "update_date": "2021-05-24 10:09:50",
+      "visit": 1043,
+      "ack": null,
+      "pub_year": null,
+      "extras": null,
+      "all_authors": "V. S. Doan and D. S. Kim, &#34;DOA Estimation of Multiple Non-coherent and coherent Signals Using Element Transposition of Covariance Matrix&#34;, ICT Express, vol. 6, no. 2, pp. 67-75, June 2020. DOI : doi.org/10.1016/j.icte.2020.03.008"
+    }
+  },
+  {
+    "model": "publications.journal",
+    "pk": 616,
+    "fields": {
+      "title": "A. P. Hermawan, R. R. Ginanjar, D. S. Kim, and J. M. Lee, &#34;CNN-based Automatic Modulation Classification for Beyond 5G Communications&#34;, IEEE Communications Letters, Vol. 24 , no.  5, pp. 1038-1041,  May 2020.",
+      "journal_name": "A. P. Hermawan, R. R. Ginanjar, D. S. Kim, and J. M. Lee, &#34;CNN-based Automatic Modulation Classification for Beyond 5G Communications&#34;, IEEE Communications Letters, Vol. 24 , no.  5, pp. 1038-1041,  May 2020.",
+      "status": 4,
+      "journal_type": 1,
+      "write_date": "2020-01-13 01:11:41",
+      "update_date": "2021-05-24 10:30:16",
+      "visit": 939,
+      "ack": null,
+      "pub_year": null,
+      "extras": null,
+      "all_authors": "A. P. Hermawan, R. R. Ginanjar, D. S. Kim, and J. M. Lee, &#34;CNN-based Automatic Modulation Classification for Beyond 5G Communications&#34;, IEEE Communications Letters, Vol. 24 , no.  5, pp. 1038-1041,  May 2020."
+    }
+  },
+  {
+    "model": "publications.journal",
+    "pk": 617,
+    "fields": {
+      "title": "Shaharyar Kamal, Dong-Seong Kim, et. al., &#34;A Smart Surveillance system for People Counting and Tracking using Particle Flow and Modified SOM&#34;, Sustainability, Vol.13, No.10, pp. 5348 - 5367, May 2021. DOI : 10.3390/su13105367",
+      "journal_name": "Shaharyar Kamal, Dong-Seong Kim, et. al., &#34;A Smart Surveillance system for People Counting and Tracking using Particle Flow and Modified SOM&#34;, Sustainability, Vol.13, No.10, pp. 5348 - 5367, May 2021. DOI : 10.3390/su13105367",
+      "status": 4,
+      "journal_type": 1,
+      "write_date": "2021-05-11 08:58:23",
+      "update_date": "2021-09-14 15:31:08",
+      "visit": 543,
+      "ack": null,
+      "pub_year": null,
+      "extras": null,
+      "all_authors": "Shaharyar Kamal, Dong-Seong Kim, et. al., &#34;A Smart Surveillance system for People Counting and Tracking using Particle Flow and Modified SOM&#34;, Sustainability, Vol.13, No.10, pp. 5348 - 5367, May 2021. DOI : 10.3390/su13105367"
+    }
+  },
+  {
+    "model": "publications.journal",
+    "pk": 618,
+    "fields": {
+      "title": "Gaspard  Gashema, Jae-Min Lee, Dong-Seong Kim\u201dEfficient-spectrum management based on localisation of primary user position towards 5G\u201d,IET Communication. DOI:  10.1049/iet-com.2020.0284",
+      "journal_name": "Gaspard  Gashema, Jae-Min Lee, Dong-Seong Kim\u201dEfficient-spectrum management based on localisation of primary user position towards 5G\u201d,IET Communication. DOI:  10.1049/iet-com.2020.0284",
+      "status": null,
+      "journal_type": 1,
+      "write_date": "2020-12-31 17:17:40",
+      "update_date": "2021-01-04 22:18:30",
+      "visit": 833,
+      "ack": null,
+      "pub_year": null,
+      "extras": null,
+      "all_authors": "Gaspard  Gashema, Jae-Min Lee, Dong-Seong Kim\u201dEfficient-spectrum management based on localisation of primary user position towards 5G\u201d,IET Communication. DOI:  10.1049/iet-com.2020.0284"
+    }
+  },
+  {
+    "model": "publications.journal",
+    "pk": 619,
+    "fields": {
+      "title": "&#34;Gaspard Gashema and Dong-Seong Kim&#34; Throughput Enhancement under Full-Duplex with SI-Suppression in 5G Cognitive Radio Networks, wireless personal communication, 2020 (S)",
+      "journal_name": "&#34;Gaspard Gashema and Dong-Seong Kim&#34; Throughput Enhancement under Full-Duplex with SI-Suppression in 5G Cognitive Radio Networks, wireless personal communication, 2020 (S)",
+      "status": null,
+      "journal_type": 1,
+      "write_date": "2020-01-14 19:25:13",
+      "update_date": "2020-07-28 15:05:07",
+      "visit": 735,
+      "ack": null,
+      "pub_year": null,
+      "extras": null,
+      "all_authors": "&#34;Gaspard Gashema and Dong-Seong Kim&#34; Throughput Enhancement under Full-Duplex with SI-Suppression in 5G Cognitive Radio Networks, wireless personal communication, 2020 (S)"
+    }
+  },
+  {
+    "model": "publications.journal",
+    "pk": 620,
+    "fields": {
+      "title": "Thien Huynh-The, Cam-Hao Hua, Quoc-Viet Pham, Dong-Seong Kim, &#34;MCNet: An Efficient CNN Architecture for Robust Automatic Modulation Classification&#34;, IEEE Communication Letters, vol. 24, no. 4, pp. 811-815, April 2020",
+      "journal_name": "Thien Huynh-The, Cam-Hao Hua, Quoc-Viet Pham, Dong-Seong Kim, &#34;MCNet: An Efficient CNN Architecture for Robust Automatic Modulation Classification&#34;, IEEE Communication Letters, vol. 24, no. 4, pp. 811-815, April 2020",
+      "status": 4,
+      "journal_type": 1,
+      "write_date": "2020-01-17 08:58:38",
+      "update_date": "2021-05-24 10:22:18",
+      "visit": 893,
+      "ack": null,
+      "pub_year": null,
+      "extras": null,
+      "all_authors": "Thien Huynh-The, Cam-Hao Hua, Quoc-Viet Pham, Dong-Seong Kim, &#34;MCNet: An Efficient CNN Architecture for Robust Automatic Modulation Classification&#34;, IEEE Communication Letters, vol. 24, no. 4, pp. 811-815, April 2020"
+    }
+  },
+  {
+    "model": "publications.journal",
+    "pk": 621,
+    "fields": {
+      "title": "Kevin Putra Dirgantoro, Williams Paul Nwadiugwu, Jae Min Lee, and Dong-Seong Kim, &#34;Dual Fieldbus Industrial IoT Networks using Edge Server Architecture&#34;, Elsevier Manufacturing Letters, Vol. 24, pp. 108-112, April 2020. (IF: 1.07)",
+      "journal_name": "Kevin Putra Dirgantoro, Williams Paul Nwadiugwu, Jae Min Lee, and Dong-Seong Kim, &#34;Dual Fieldbus Industrial IoT Networks using Edge Server Architecture&#34;, Elsevier Manufacturing Letters, Vol. 24, pp. 108-112, April 2020. (IF: 1.07)",
+      "status": 4,
+      "journal_type": 1,
+      "write_date": "2020-01-17 14:34:12",
+      "update_date": "2021-05-24 12:43:48",
+      "visit": 857,
+      "ack": null,
+      "pub_year": null,
+      "extras": null,
+      "all_authors": "Kevin Putra Dirgantoro, Williams Paul Nwadiugwu, Jae Min Lee, and Dong-Seong Kim, &#34;Dual Fieldbus Industrial IoT Networks using Edge Server Architecture&#34;, Elsevier Manufacturing Letters, Vol. 24, pp. 108-112, April 2020. (IF: 1.07)"
+    }
+  },
+  {
+    "model": "publications.journal",
+    "pk": 622,
+    "fields": {
+      "title": "Rizki Rivai Ginanjar, Ade Pitra Hermawan, Jae-Min Lee, and Dong-Seong. Kim, &#34;UAV-Based Sensor Nodes Localization Scheme utilizing Shallow Neural Network&#34;, IEEE Transactions on Industrial Informatics, 2020. (R)",
+      "journal_name": "Rizki Rivai Ginanjar, Ade Pitra Hermawan, Jae-Min Lee, and Dong-Seong. Kim, &#34;UAV-Based Sensor Nodes Localization Scheme utilizing Shallow Neural Network&#34;, IEEE Transactions on Industrial Informatics, 2020. (R)",
+      "status": null,
+      "journal_type": 1,
+      "write_date": "2020-02-02 07:39:20",
+      "update_date": "2020-11-11 15:50:10",
+      "visit": 819,
+      "ack": null,
+      "pub_year": null,
+      "extras": null,
+      "all_authors": "Rizki Rivai Ginanjar, Ade Pitra Hermawan, Jae-Min Lee, and Dong-Seong. Kim, &#34;UAV-Based Sensor Nodes Localization Scheme utilizing Shallow Neural Network&#34;, IEEE Transactions on Industrial Informatics, 2020. (R)"
+    }
+  }
+]
