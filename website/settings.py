@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'publications',
     'pages',
+    'members',
     'bootstrap5',
 ]
 
