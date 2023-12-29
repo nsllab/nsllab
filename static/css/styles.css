@@ -24,6 +24,10 @@ a:hover {
     color: #17a2b8;
 }
 
+.text-justify {
+    text-align: justify;
+}
+
 
 p {
     color: #ffffff;
