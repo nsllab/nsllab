@@ -52,7 +52,7 @@ if APPENGINE_URL:
     CSRF_TRUSTED_ORIGINS = [APPENGINE_URL]
     SECURE_SSL_REDIRECT = True
 else:
-    ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app']
+    ALLOWED_HOSTS = ['127.0.0.1']
 
 
 # Application definition
@@ -101,7 +101,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'website.wsgi.app'
+WSGI_APPLICATION = 'website.wsgi.application'
 
 
 # Database
