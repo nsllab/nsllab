@@ -1,0 +1,7 @@
+.env
+db.sqlite3
+journals.csv
+Journal_v2.json
+static
+temp.csv
+populate_journal.py

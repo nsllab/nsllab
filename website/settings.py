@@ -24,13 +24,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 SECRET_KEY = config('SECRET_KEY')
-print(SECRET_KEY)
 
 # DEBUG = 'RENDER' not in os.environ
 
 # DEBUG = config('DEBUG', default=False, cast=bool)
 DEBUG = 'RENDER' not in os.environ
-print(DEBUG)
 
 
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
