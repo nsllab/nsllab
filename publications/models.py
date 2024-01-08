@@ -5,9 +5,10 @@ from django.db import models
 from django.utils import timezone
 from django.contrib.auth import get_user_model
 from .choices import JOURNAL_STATUS, JOURNAL_TYPE
+from members.models import Member
 
 def get_default_user():
-    return get_user_model().objects.get(username='admin')
+    return get_user_model().objects.get(username='admin').id
 
 # Create your models here.
 class Journal(models.Model):
@@ -17,7 +18,7 @@ class Journal(models.Model):
     status = models.IntegerField(choices=JOURNAL_STATUS, default=1, null=False, blank=False)
     journal_type = models.IntegerField(choices=JOURNAL_TYPE, default=1, null=False, blank=False)
     # writer = models.ForeignKey(get_user_model(), on_delete=models.DO_NOTHING, related_name='journals', default=get_default_user)
-    # writer = models.ForeignKey(CustomUser, on_delete=models.DO_NOTHING, related_name='journals')
+    writer = models.ForeignKey(Member, on_delete=models.DO_NOTHING, related_name='journals', default=get_default_user)
     write_date = models.DateTimeField(default=timezone.now)
     update_date = models.DateTimeField(default=timezone.now)
     visit = models.IntegerField(default=1)
