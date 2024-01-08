@@ -25,4 +25,4 @@ class Journal(models.Model):
     pub_year = models.CharField(max_length=10, blank=True)
     extras = models.CharField(max_length=50, null=True, blank=True)
     all_authors = models.CharField(max_length=200, null=True, blank=True)
-    # file = models.FileField(upload_to='journals/', null=True, blank=True)
+    file = models.FileField(upload_to='journals/', null=True, blank=True)

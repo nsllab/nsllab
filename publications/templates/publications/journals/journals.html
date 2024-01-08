@@ -20,7 +20,7 @@
           <tr>
             <th scope="row">{{ forloop.revcounter}}</th>
             <td>
-              <a href="">
+              <a href="{% url 'publications:journal_detail' pk=journal.pk %}">
                 {{ journal.title }} <br>
                 <span>{{ journal.journal_name }}</span>
               </a>

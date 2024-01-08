@@ -78,3 +78,8 @@ def journal_update(request, pk):
     }
 
     return render(request, 'publications/journals/update.html', context)
+
+class JournalDetailView(DetailView):
+    model = Journal
+    template_name = 'publications/journals/journal_details.html'
+    context_object_name = 'journal'

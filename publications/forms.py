@@ -5,7 +5,7 @@ class JournalForm(forms.ModelForm):
     class Meta:
         model = Journal
         # fields = '__all__'  # You can specify the fields you want to include in the form
-        exclude = ['writer', 'write_date', 'update_date', 'ack', 'visit']
+        exclude = ['writer', 'write_date', 'update_date', 'ack', 'visit', 'pub_year']
 
 
 class JournalUpdateForm(forms.ModelForm):
