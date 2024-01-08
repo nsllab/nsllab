@@ -11,11 +11,11 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
 from pathlib import Path
-# from decouple import config
-import os, environ
-from urllib.parse import urlparse
+from decouple import config
+import os
+# from urllib.parse import urlparse
 import dj_database_url
-from django.core.exceptions import ImproperlyConfigured
+# from django.core.exceptions import ImproperlyConfigured
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -23,38 +23,16 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 
-env = environ.Env()
-environ.Env.read_env()
+SECRET_KEY = config('SECRET_KEY')
+print(SECRET_KEY)
 
+# DEBUG = 'RENDER' not in os.environ
 
-# def get_env_variable(var_name):
-#     try:
-#         return env(var_name)
-#     except environ.exceptions.ImproperlyConfigured:
-#         error_msg = f"Set the {var_name} environment variable"
-#         raise ImproperlyConfigured(error_msg)
-
-
-SECRET_KEY = 'postgres://gabriel:foobar@//cloudsql/nsllab-web:asia-southeast1:nsllabdb'
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = config('DEBUG', default=False, cast=bool)
 print(DEBUG)
-# SECURITY WARNING: It's recommended that you use this when
-# running in production. The URL will be known once you first deploy
-# to App Engine. This code takes the URL and converts it to both these settings formats.
-APPENGINE_URL = env("APPENGINE_URL", default=None)
-if APPENGINE_URL:
-    # Ensure a scheme is present in the URL before it's processed.
-    if not urlparse(APPENGINE_URL).scheme:
-        APPENGINE_URL = f"https://{APPENGINE_URL}"
-
-    ALLOWED_HOSTS = [urlparse(APPENGINE_URL).netloc]
-    CSRF_TRUSTED_ORIGINS = [APPENGINE_URL]
-    SECURE_SSL_REDIRECT = True
-else:
-    ALLOWED_HOSTS = ['127.0.0.1']
 
 
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
 # Application definition
 
 INSTALLED_APPS = [
@@ -125,15 +103,15 @@ WSGI_APPLICATION = 'website.wsgi.application'
 #     }
 # }
 
-# DATABASES = {
-#     'default': dj_database_url.config(
-#         default=config('DATABASE_URL'),
-#         conn_max_age=600,
-#         conn_health_checks=True,
-#     )
-# }
+DATABASES = {
+    'default': dj_database_url.config(
+        default=config('DATABASE_URL'),
+        conn_max_age=600,
+        conn_health_checks=True,
+    )
+}
 
-DATABASES = {'default': env.db()}
+# DATABASES = {'default': env.db()}
 
 
 # Password validation
