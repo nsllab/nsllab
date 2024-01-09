@@ -1,5 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from .models import Journal, Conference
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin
 from .forms import JournalForm, JournalUpdateForm, ConferenceForm, ConferenceUpdateForm
 from django.contrib.messages.views import SuccessMessageMixin
 from django.views.generic import CreateView, UpdateView, DetailView
@@ -47,8 +49,8 @@ def journals(request):
     }
     return render(request, 'publications/journals/journals.html', context)
 
-
-class JournalCreateView(SuccessMessageMixin, CreateView):
+class JournalCreateView(LoginRequiredMixin, SuccessMessageMixin, CreateView):
+    login_url = "/members/login/"
     model = Journal
     form_class = JournalForm  # Replace with your actual form
     template_name = 'publications/journals/create.html'  # Replace with your template name
@@ -59,7 +61,7 @@ class JournalCreateView(SuccessMessageMixin, CreateView):
         form.instance.writer = self.request.user  # Set the writer to the current user
         return super().form_valid(form)
 
-
+@login_required(login_url="/members/login")
 def journal_update(request, pk):
     journal = get_object_or_404(Journal, pk=pk)
 
@@ -79,7 +81,9 @@ def journal_update(request, pk):
 
     return render(request, 'publications/journals/update.html', context)
 
-class JournalDetailView(DetailView):
+
+class JournalDetailView(LoginRequiredMixin, DetailView):
+    login_url="/members/login"
     model = Journal
     template_name = 'publications/journals/journal_details.html'
     context_object_name = 'journal'
@@ -118,7 +122,9 @@ def conferences(request):
     return render(request, 'publications/conferences/conferences.html', context)
 
 
-class ConferenceCreateView(SuccessMessageMixin, CreateView):
+
+class ConferenceCreateView(LoginRequiredMixin, SuccessMessageMixin, CreateView):
+    login_url="/members/login"
     model = Conference
     form_class = ConferenceForm  # Replace with your actual form
     template_name = 'publications/conferences/create.html'  # Replace with your template name
@@ -129,11 +135,14 @@ class ConferenceCreateView(SuccessMessageMixin, CreateView):
         form.instance.writer = self.request.user  # Set the writer to the current user
         return super().form_valid(form)
 
-class ConferenceDetailView(DetailView):
+
+class ConferenceDetailView(LoginRequiredMixin, DetailView):
+    login_url="/members/login"
     model = Conference
     template_name = 'publications/conferences/conference_details.html'
     context_object_name = 'conference'
 
+@login_required(login_url="/members/login")
 def conference_update(request, pk):
     conference = get_object_or_404(Conference, pk=pk)
 

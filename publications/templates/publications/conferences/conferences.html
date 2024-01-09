@@ -33,7 +33,7 @@
               
               
             </td>
-            
+            {% if user.is_authenticated %}
             <td>
               <a
                 href="{% url 'publications:conference_update' pk=conference.pk %}""
@@ -41,7 +41,7 @@
                 >Edit</a
               >
             </td>
-            
+            {% endif %}
           </tr>
           
 
@@ -103,7 +103,7 @@
             </div>
             <div class="d-grid gap-2 mt-2">
                 <a href="{% url 'publications:journals' %}" class="btn btn-outline-info">
-                  <i class="fa-solid fa-magnifying-glass"></i>Clear Search
+                  <i class="fa-solid fa-xmark"></i> Clear Search
                 </a>
               </div>
           </form>
@@ -115,10 +115,12 @@
   </div>
 </div>
 
+{% if user.is_authenticated %}
 <div class="position-fixed bottom-0 end-0 p-3">
     <a href="{% url 'publications:conference_create' %}" class="btn btn-outline-info" type="button">
         <i class="fa-solid fa-plus"></i> Add Conference
 	  <!-- Bootstrap Icons -->
 	</a>
   </div>
+{% endif %}
 {% endblock %}

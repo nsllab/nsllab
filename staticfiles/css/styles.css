@@ -24,6 +24,10 @@ a:hover {
     color: #17a2b8;
 }
 
+.text-justify {
+    text-align: justify;
+}
+
 
 p {
     color: #ffffff;
@@ -82,4 +86,12 @@ p {
 .research-card i {
     font-size:600%;
     color: #17a2b8;
+}
+
+.accounts_form {
+    height: 100vh !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
 }
