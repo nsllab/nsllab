@@ -1,9 +1,9 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from .models import Journal
-from .forms import JournalForm, JournalUpdateForm
+from .models import Journal, Conference
+from .forms import JournalForm, JournalUpdateForm, ConferenceForm, ConferenceUpdateForm
 from django.contrib.messages.views import SuccessMessageMixin
 from django.views.generic import CreateView, UpdateView, DetailView
-from .choices import JOURNAL_STATUS, JOURNAL_TYPE
+from .choices import PAPER_STATUS, PAPER_TYPE
 from django.urls import reverse_lazy
 from django.contrib import messages
 
@@ -42,8 +42,8 @@ def journals(request):
 
     context = {
         'journals': journals,
-        'journal_type': JOURNAL_TYPE,
-        'status': JOURNAL_STATUS,
+        'journal_type': PAPER_TYPE,
+        'status': PAPER_STATUS,
     }
     return render(request, 'publications/journals/journals.html', context)
 
@@ -83,3 +83,72 @@ class JournalDetailView(DetailView):
     model = Journal
     template_name = 'publications/journals/journal_details.html'
     context_object_name = 'journal'
+
+
+def conferences(request):
+    conferences = Conference.objects.order_by('-write_date')
+    search = request.GET
+    
+    if 'title' in search:
+        title = search['title']
+        if title:
+            conferences = conferences.filter(title__icontains=title)
+
+    if 'year' in search:
+        year = search['year']
+        if year:
+            conferences = conferences.filter(write_date__icontains=year)
+
+
+    if 'journal_type' in search:
+        conference_type = search['conference_type']
+        if conference_type:
+            conferences = conferences.filter(conference_type__iexact=conference_type)
+
+    if 'status' in search:
+        status = search['status']
+        if status:
+            conferences = conferences.filter(status__iexact=status)
+
+    context = {
+        'conferences': conferences,
+        'journal_type': PAPER_TYPE,
+        'status': PAPER_STATUS,
+    }
+    return render(request, 'publications/conferences/conferences.html', context)
+
+
+class ConferenceCreateView(SuccessMessageMixin, CreateView):
+    model = Conference
+    form_class = ConferenceForm  # Replace with your actual form
+    template_name = 'publications/conferences/create.html'  # Replace with your template name
+    success_url = reverse_lazy('publications:conferences')  # Replace with your success URL
+    success_message =  "Conference added successfully"
+
+    def form_valid(self, form):
+        form.instance.writer = self.request.user  # Set the writer to the current user
+        return super().form_valid(form)
+
+class ConferenceDetailView(DetailView):
+    model = Conference
+    template_name = 'publications/conferences/conference_details.html'
+    context_object_name = 'conference'
+
+def conference_update(request, pk):
+    conference = get_object_or_404(Conference, pk=pk)
+
+    if request.method == 'POST':
+        form = ConferenceUpdateForm(request.POST, request.FILES, instance=conference)
+        
+        if form.is_valid():
+            form.save()
+            messages.add_message(request, messages.SUCCESS, 'Update Successful')
+            return redirect('publications:conferences')
+    else:
+        form = ConferenceUpdateForm(instance=conference)
+
+    context = {
+        'form': form,
+    }
+
+    return render(request, 'publications/conferences/update.html', context)

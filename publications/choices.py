@@ -1,4 +1,4 @@
-JOURNAL_STATUS = [
+PAPER_STATUS = [
     (1, "Preparation"),
     (2, "Submitted"),
     (3, "Under Review"),
@@ -8,7 +8,7 @@ JOURNAL_STATUS = [
     (7, "Rejected"),
 ]
 
-JOURNAL_TYPE = [
+PAPER_TYPE = [
     (1, "International"),
     (2, "Domestic"),
 ]

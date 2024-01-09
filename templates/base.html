@@ -12,7 +12,7 @@
     {# Load CSS and JavaScript #}
     {% bootstrap_css %}
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
-    {% bootstrap_javascript %}
+    
   </head>
   <body>
     {% include 'partials/_navbar.html' %}
@@ -27,5 +27,9 @@
 
     {% endblock %}
     {% include 'partials/_footer.html' %}
+
+    <script src="{% static 'js/main.js' %}"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    {% bootstrap_javascript %}
   </body>
 </html>

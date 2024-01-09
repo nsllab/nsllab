@@ -2,6 +2,10 @@
 db.sqlite3
 journals.csv
 Journal_v2.json
+Journal_v4.json
+Journal_v3.json
+dom_conf.json
+int_conf.json
 static
 temp.csv
 populate_journal.py
