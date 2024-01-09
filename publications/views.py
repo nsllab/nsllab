@@ -82,8 +82,7 @@ def journal_update(request, pk):
     return render(request, 'publications/journals/update.html', context)
 
 
-class JournalDetailView(LoginRequiredMixin, DetailView):
-    login_url="/members/login"
+class JournalDetailView(DetailView):
     model = Journal
     template_name = 'publications/journals/journal_details.html'
     context_object_name = 'journal'
@@ -136,8 +135,7 @@ class ConferenceCreateView(LoginRequiredMixin, SuccessMessageMixin, CreateView):
         return super().form_valid(form)
 
 
-class ConferenceDetailView(LoginRequiredMixin, DetailView):
-    login_url="/members/login"
+class ConferenceDetailView(DetailView):
     model = Conference
     template_name = 'publications/conferences/conference_details.html'
     context_object_name = 'conference'

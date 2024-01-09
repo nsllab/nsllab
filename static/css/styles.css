@@ -38,7 +38,7 @@ p {
 }
 
 .custom-banner {
-    height: 40vh; /* 20% of the viewport height */
+    height: 30vh; /* 20% of the viewport height */
     /* background: linear-gradient(135deg, #6c5b7b, #c06c84, #6c5b7b);  */
     background-image: url('../img/four.png');
     color: #fff; /* Text color */

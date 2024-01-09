@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+{% load bootstrap5 %}
+
+{% block content %}
+{% include 'partials/_banner.html' with heading=journal.title %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="card shadow-lg">
+                <div class="card-header">
+                    <nav class="pt-2 float-end" style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                          <li class="breadcrumb-item"><a href="{% url 'pages:index' %}">Home</a></li>
+                          <li class="breadcrumb-item"><a href="{% url 'publications:conferences' %}">Conferences</a></li>
+                          <li class="breadcrumb-item active" aria-current="page">Conferences</li>
+                        </ol>
+                      </nav>
+                </div>
+                <div class="card-body">
+                    
+                    <ul class="list-group mb-4">
+                        <li class="list-group-item">
+                            <span class="fw-bold">Conference Name:</span> {{ conference.conference_name }}
+                        </li>
+                        <li class="list-group-item">
+                            <span class="fw-bold">Abstract:</span> {{ conference.abstract }}
+                        </li>
+                        <li class="list-group-item">
+                            <span class="fw-bold">Status:</span> {{ conference.get_status_display }}
+                        </li>
+                        <li class="list-group-item">
+                            <span class="fw-bold">Conference Type:</span> {{ conference.get_conference_type_display }}
+                        </li>
+                        <li class="list-group-item">
+                            <span class="fw-bold">Author:</span> {{ conference.writer.username }}
+                        </li>
+                        <li class="list-group-item">
+                            <span class="fw-bold">Write Date:</span> {{ conference.write_date }}
+                        </li>
+                        <li class="list-group-item">
+                            <span class="fw-bold">Update Date:</span> {{ conference.update_date }}
+                        </li>
+                        <li class="list-group-item">
+                            <span class="fw-bold">Visit Count:</span> {{ conference.visit }}
+                        </li>
+                        <li class="list-group-item">
+                            <span class="fw-bold">Acknowledgment:</span> {{ conference.ack }}
+                        </li>
+                        <li class="list-group-item">
+                            <span class="fw-bold">File:</span>
+                            {% if conference.file %}
+                                <a href="{{ conference.file.url }}" target="_blank">Download / Open PDF</a>
+                            {% else %}
+                                No file attached
+                            {% endif %}
+                        </li>
+                    </ul>
+                    <div class="d-grid gap-2">
+                        <a href="{% url 'publications:conferences' %}" class="btn btn-outline-info">Back to Conference List</a>                      
+                        {% if user.is_authenticated %}
+                        <a href="{% url 'publications:conference_update' pk=conference.pk %}" class="btn btn-outline-info">Edit</a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
