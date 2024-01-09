@@ -6,6 +6,8 @@ Journal_v4.json
 Journal_v3.json
 dom_conf.json
 int_conf.json
+member_info.json
+pop_user.py
 static
 temp.csv
 populate_journal.py

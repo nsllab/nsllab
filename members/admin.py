@@ -4,7 +4,7 @@ from .models import Member
 
 class MemberAdmin(UserAdmin):
     # Define your custom configurations for the Member model admin here
-    list_display = ('username', 'email', 'address', 'login_cnt', 'last_login', 'is_active', 'is_staff', 'is_superuser')
+    list_display = ('username', 'password', 'email', 'address', 'login_cnt', 'last_login', 'is_active', 'is_staff', 'is_superuser')
     fieldsets = (
         # Include your custom fields in the fieldsets as needed
         (None, {'fields': ('username', 'password')}),
