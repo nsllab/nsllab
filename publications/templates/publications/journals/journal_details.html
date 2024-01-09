@@ -46,6 +46,14 @@
                         <li class="list-group-item">
                             <span class="fw-bold">Acknowledgment:</span> {{ journal.ack }}
                         </li>
+                        <li class="list-group-item">
+                            <span class="fw-bold">File:</span>
+                            {% if journal.file %}
+                                <a href="{{ journal.file.url }}" target="_blank">Download / Open PDF</a>
+                            {% else %}
+                                No file attached
+                            {% endif %}
+                        </li>
                     </ul>
                     <div class="d-grid gap-2">
                         <a href="{% url 'publications:journals' %}" class="btn btn-outline-info">Back to Journal List</a>                      
