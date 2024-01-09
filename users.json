@@ -1,6 +1,27 @@
 [
 {
   "model": "members.member",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$Q0RL0yCfFNUG4UeNke7bqw$IfL+fcT+tH5RfgY9wSBjEZeQwiq3EuM9ezfpPeSHcpw=",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "admin@mail.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2024-01-08T08:17:51.584Z",
+    "address": null,
+    "login_cnt": 0,
+    "restriction_date": null,
+    "last_login": "2024-01-09T06:13:25.940Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "members.member",
   "pk": 547,
   "fields": {
     "password": "pbkdf2_sha256$600000$t7ONJg6scpauBjkQQ5a9qt$nfVcc609hzm9VPiobDCeZqTeXxwpPATaODk5bgGOXI4=",
@@ -10,7 +31,7 @@
     "last_name": "",
     "email": "nslab@kumoh.ac.kr",
     "is_staff": false,
-    "is_active": false,
+    "is_active": true,
     "date_joined": "2024-01-09T06:10:01Z",
     "address": null,
     "login_cnt": 0,
