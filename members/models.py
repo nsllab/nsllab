@@ -23,11 +23,13 @@ class Bio(models.Model):
     bio = models.TextField(blank=True, null=True)
     research_area = models.TextField()
     education = models.TextField()
-    career = models.TextField()
+    career = models.TextField(null=True, blank=True)
     position = models.IntegerField(choices=POSITION, default=1, null=False, blank=False)
+    display_order = models.IntegerField()
     link = models.URLField(blank=True, null=True)
     email_list = models.TextField()
     image = models.ImageField(upload_to='bio_images/', storage=MediaCloudinaryStorage, null=True, blank=True)
+    # date_joined 
     # user = models.OneToOneField(Member, on_delete=models.DO_NOTHING, related_name='bio', null=True, blank=True)
 
 

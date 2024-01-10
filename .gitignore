@@ -7,6 +7,8 @@ Journal_v3.json
 dom_conf.json
 int_conf.json
 member_info.json
+full_time_researcher.json
+pop_member.py
 pop_user.py
 static
 temp.csv

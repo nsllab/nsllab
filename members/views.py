@@ -5,7 +5,7 @@ from django.contrib.auth import login, logout, authenticate, login
 from .forms import MemberCreationForm, LoginForm, MemberUpdateForm
 from django.contrib import messages
 from .models import Bio, Member
-from django.views.generic import CreateView, UpdateView, DetailView
+from django.views.generic import CreateView, UpdateView, DetailView, ListView
 from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib.auth.views import PasswordChangeView
 from django.contrib.auth.mixins import LoginRequiredMixin
@@ -87,17 +87,41 @@ def professors_list(request):
         }
     return render(request, 'members/professors.html', context)
 
-def post_docs_list(request):
 
-    bio = Bio.objects.filter(position=2)
-    context = {
-        'bios': bio,
-        'total': len(bio)
-        }
-    return render(request, 'members/post_docs.html', context)
+class PostDocsListView(ListView):
+    model = Bio
+    template_name = 'members/post_docs.html'
+    context_object_name = 'bios'
+
+    def get_queryset(self):
+        return Bio.objects.filter(position=2)
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['total'] = self.get_queryset().count()
+        return context
+
+
+class FullTimeListView(ListView):
+    model = Bio
+    template_name = 'members/full_time.html'
+    context_object_name = 'bios'
+
+    def get_queryset(self):
+        return Bio.objects.filter(position=3)
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['total'] = self.get_queryset().count()
+        return context
 
 
 class PostDoctDetailView(DetailView):
     model = Bio
     template_name = 'members/post_doc_detail.html'
     context_object_name = 'post_doc'
+
+class FullTimeDetailView(DetailView):
+    model = Bio
+    template_name = 'members/full_time_detail.html'
+    context_object_name = 'full_time'

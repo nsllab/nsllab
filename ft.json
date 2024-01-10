@@ -1,0 +1,495 @@
+[
+{
+  "model": "members.bio",
+  "pk": 4,
+  "fields": {
+    "name": "Cha Joong Hyuck",
+    "last_name": null,
+    "bio": null,
+    "research_area": "Real-Time Network System, Data Distribution Service",
+    "education": "PhD Candidate, Dept. of IT Convergence Engineering, Kumoh \r\nNational Institute of Technology, Gumi, South Korea (3.2017 - \r\npresent)\r\n\r\nM.S. Dept. of IT Convergence Engineering, Kumoh National \r\nInstitute of Technology, Gumi, South Korea (3.2016 - 02.2018)\r\n\r\nB.S. School of Electronic Engineering, Kumoh National Institute \r\nof Technology (3.2011 - 2.2016)",
+    "career": null,
+    "position": 3,
+    "display_order": 1,
+    "link": null,
+    "email_list": "ckwndgur@naver.com (http://blog.naver.com/ckwndgur)",
+    "image": "14175275472300.JPG"
+  }
+},
+{
+  "model": "members.bio",
+  "pk": 5,
+  "fields": {
+    "name": "Da Hye Kim",
+    "last_name": null,
+    "bio": null,
+    "research_area": "Real-time Wireless Network and Avionic System",
+    "education": "PhD. Candidate Dept. of IT Convergence Engineering, Kumoh \r\nNational Institute of Technology, Gumi, South Korea (3.2018 - \r\npresent)\r\n\r\nM.S. Dept. of Electronic Engineering, Kumoh National \r\nInstitute of Technology, Gumi, South Korea (3.2016 - 2.2018.)\r\n\r\nB.S. School of Electronic Engineering, Kumoh National Institute \r\nof Technology (3.2010 - 2.2015)",
+    "career": null,
+    "position": 3,
+    "display_order": 2,
+    "link": null,
+    "email_list": "gily3454@naver.com",
+    "image": "15634235515800.jpg"
+  }
+},
+{
+  "model": "members.bio",
+  "pk": 6,
+  "fields": {
+    "name": "Philip Tobianto Daely",
+    "last_name": null,
+    "bio": null,
+    "research_area": "Bio-Inspired Optimization, Distributed Computing, Wireless Localization, Industrial Internet of Thin",
+    "education": "Ph.D. Candidate, Dept. of IT Convergence Engineering, Kumoh \r\nNational Institute of Technology, South Korea (03.2019 - \r\npresent).\r\n\r\nM.Eng., Dept. of IT Convergence Engineering, \r\nKumoh National Institute of Technology, South Korea. \r\n(09.2015 - 08.2017)\r\n\r\nB.Eng., Department of Electrical Engineering, \r\nTelkom University, Bandung, Indonesia (08.2011 - 02.2015).",
+    "career": null,
+    "position": 3,
+    "display_order": 4,
+    "link": null,
+    "email_list": "philip.daely@kumoh.ac.kr",
+    "image": "15517665369900.jpg"
+  }
+},
+{
+  "model": "members.bio",
+  "pk": 7,
+  "fields": {
+    "name": "Mohtasin Golam",
+    "last_name": null,
+    "bio": null,
+    "research_area": "Energy harvesting, Deep learning, Machine learning,  Blockchain",
+    "education": "PhD Candidate, Dept. of IT Convergence, Kumoh National \r\nInstitute of Technology, South Korea (2021.03 - Present)\r\n\r\nM.Sc in IT Convergence, Kumoh National Institute of \r\nTechnology (2019.03 - 2021.02)\r\n\r\nB.Sc in Electrical and Electronic Engineering, Rajshahi \r\nUniversity of Engineering and Technology(RUET) (2014.02-\r\n2018.10)",
+    "career": null,
+    "position": 3,
+    "display_order": 6,
+    "link": null,
+    "email_list": "gmoh248@gmail.com; golam248@kumoh.ac.kr",
+    "image": "15523810916200.png"
+  }
+},
+{
+  "model": "members.bio",
+  "pk": 8,
+  "fields": {
+    "name": "Ali Aouto",
+    "last_name": null,
+    "bio": null,
+    "research_area": "Deep learning, Computer Vision and Image Processing",
+    "education": "PhD Candidate, Dept. of IT Convergence Engineering, Kumoh \r\nNational Institute of Technology, Gumi, South Korea (3.2021 - \r\npresent)\r\n\r\nM.Sc. in IT Convergence Engineering from Kumoh National Institute \r\nof Technology, Gumi, South Korea (03.2019 - 02.2021)\r\n\r\nB.Sc. Dept. of Communication and Electronics Engineering, Qassim \r\nUniversity, Saudi Arabia (09.2009 - 01.2015)",
+    "career": null,
+    "position": 3,
+    "display_order": 6,
+    "link": null,
+    "email_list": "ali.aouto@kumoh.ac.kr, ali.aouto1@gmail.com",
+    "image": "16209144692900.jpg"
+  }
+},
+{
+  "model": "members.bio",
+  "pk": 9,
+  "fields": {
+    "name": "Love Ahakonye",
+    "last_name": null,
+    "bio": null,
+    "research_area": "Real-Time network systems in Industrial IoT",
+    "education": "Ph.D. Candidate, Dept. of IT Convergence Engineering, Kumoh \r\nNational Institute of Technology, SOUTH KOREA.(2021.03 - \r\nPresent)\r\n\r\nMSc IT, Information Technology, Federal University of Technology, \r\nNigeria. (2014 - 2016).\r\n\r\nB.Sc., Dept. of Mathematics/Computer Science, University of \r\nPort Harcourt, Nigeria. (1996 - 2001).",
+    "career": null,
+    "position": 3,
+    "display_order": 7,
+    "link": null,
+    "email_list": "loveahakonye@kumoh.ac.kr, vital_love2000@yahoo.com",
+    "image": "16293382018200.jpg"
+  }
+},
+{
+  "model": "members.bio",
+  "pk": 10,
+  "fields": {
+    "name": "Made Adi Paramartha Putra",
+    "last_name": null,
+    "bio": null,
+    "research_area": "Federated Learning, Deep Learning, Additive Manufacturing, Industrial IoT, Named Data Network",
+    "education": "Ph.D., Dept. of IT Convergence Engineering, Kumoh \r\nNational Institute of Technology, South Korea (03.2021 - \r\npresent)\r\n\r\nM.Eng., Telematics and Telecommunication Network, \r\nBandung Institute of Technology, Bandung, Indonesia(2017-2019).\r\n\r\nB.Eng., Telecommunication Engineering, \r\nTelkom University, Bandung, Indonesia (2013-2017).",
+    "career": null,
+    "position": 3,
+    "display_order": 7,
+    "link": null,
+    "email_list": "mdparamartha95@kumoh.ac.kr",
+    "image": "16670405886600.png"
+  }
+},
+{
+  "model": "members.bio",
+  "pk": 11,
+  "fields": {
+    "name": "Ahmad Zainudin",
+    "last_name": null,
+    "bio": null,
+    "research_area": "Intrusion Detection Systems, Federated Learning, Blockchain, and Metaverse Applications",
+    "education": "PhD Candidate Dept. of Electronic Engineering, Kumoh \r\nNational Institute of Technology, Gumi, South Korea \r\n(9.2021 - present)\r\n\r\nM.Eng. Dept. of Electronic Engineering, Electronic Engineering \r\nPolytechnic Institute of Surabaya, Surabaya, Indonesia \r\n(11.2012 &#8211; 9.2014)\r\n\r\nB.Eng. Dept. of Telecommunication Engineering, Electronic \r\nEngineering Polytechnic Institute of Surabaya, Surabaya, \r\nIndonesia (8.2007 &#8211; 8.2011)",
+    "career": null,
+    "position": 3,
+    "display_order": 8,
+    "link": null,
+    "email_list": "zai[at]kumoh.ac.kr",
+    "image": "16280643101100.jpg"
+  }
+},
+{
+  "model": "members.bio",
+  "pk": 12,
+  "fields": {
+    "name": "Esmot Ara Tuli",
+    "last_name": null,
+    "bio": null,
+    "research_area": "Real-Time network systems in Industrial IoT, Edge Computing in Industrial IoT",
+    "education": "Integrated Master’s & Doctoral Dept. of IT Convergence \r\nEngineering, Kumoh National Institute of Technology (03.2019 - \r\npresent)\r\n\r\nB.Sc. in Computer Science and Engineering, Jatiya Kabi \r\nKazi Nazrul Islam University, Bangladesh. (2012)",
+    "career": null,
+    "position": 3,
+    "display_order": 9,
+    "link": null,
+    "email_list": "tuli.cse.bd@gmail.com",
+    "image": "15479446152600.jpg"
+  }
+},
+{
+  "model": "members.bio",
+  "pk": 13,
+  "fields": {
+    "name": "Hyeong Jin Kim",
+    "last_name": null,
+    "bio": null,
+    "research_area": "Real-time Internet of Thing and Unmanned Aerial Vehicle",
+    "education": "PhD Candidate, Dept. of IT Convergence Engineering, Kumoh \r\nNational Institute of Technology, Gumi, South Korea (9.2021 - \r\npresent)\r\n\r\nM.S. Dept. of IT Convergence, Kumoh National Institute of \r\nTechnology, Gumi, South Korea. ( 09.2019 -  present). \r\n\r\nB.S. Dept. of Electronic Engineering, Kumoh National\r\nInstitute of Technology(3.2014 - 08.2019)",
+    "career": null,
+    "position": 3,
+    "display_order": 10,
+    "link": null,
+    "email_list": "khj951007@naver.com",
+    "image": "16293408730900.jpg"
+  }
+},
+{
+  "model": "members.bio",
+  "pk": 14,
+  "fields": {
+    "name": "Minhui Jang",
+    "last_name": null,
+    "bio": null,
+    "research_area": "Real-time System",
+    "education": "PhD. Candidate, Dept. of IT Convergence Engineering, Kumoh \r\nNational Institute of Technology, Gumi, South Korea (9.2021 - \r\npresent)\r\n\r\nM.S. Dept. of IT Convergence, Kumoh National Institute of \r\nTechnology, Gumi, South Korea. (9.2019 -  8.2021)\r\n\r\nB.S. Dept. of Electronic Engineering\r\nKumoh National Institute of Technology(3.2015 - 8.2019)",
+    "career": null,
+    "position": 3,
+    "display_order": 11,
+    "link": null,
+    "email_list": "jmhee@kumoh.ac.kr",
+    "image": "16499140979800.jpg"
+  }
+},
+{
+  "model": "members.bio",
+  "pk": 15,
+  "fields": {
+    "name": "Etobi Damian Tita",
+    "last_name": null,
+    "bio": null,
+    "research_area": "Real-time systems in Industrial Internet of Things (IIOT), Blockchain Layer 2 , Machine Learning",
+    "education": "PhD Candidate, Dept. of IT Convergence Engineering, \r\nKumoh National Institute of Technology, Gumi, South Korea \r\n(9.2022- present)\r\n\r\nM.S Dept of Electronic Engineering, Kumoh National Institute \r\nof Technology, Gumi, South Korea. (09.2018 - 08.2020)\r\n\r\nB.Tech, Dept of Electrical and Electronic Engineering, College \r\nof Technology, University of Buea, Cameroon (09.2010 - 03.2014).",
+    "career": null,
+    "position": 3,
+    "display_order": 26,
+    "link": null,
+    "email_list": "tita@kumoh.ac.kr",
+    "image": "15218620961200.jpg"
+  }
+},
+{
+  "model": "members.bio",
+  "pk": 16,
+  "fields": {
+    "name": "Amaizu Gabriel",
+    "last_name": null,
+    "bio": null,
+    "research_area": "Machine Learning, IIoT",
+    "education": "PhD Candidate, Dept. of IT Convergence Engineering, \r\nKumoh National Institute of Technology, Gumi, South Korea \r\n(9.2022- present)\r\n\r\nM.S. Dept of IT convergence Engineering, Kumoh National Institute \r\nof Technology (09.2019 - 08.2021)\r\n\r\nB.Sc. Dept of Computer Science, Bangalore University, India \r\n(06.2014 - 06.2017)",
+    "career": null,
+    "position": 3,
+    "display_order": 27,
+    "link": null,
+    "email_list": "gabriel4amaizu@gmail.com",
+    "image": "16281326684800.png"
+  }
+},
+{
+  "model": "members.bio",
+  "pk": 17,
+  "fields": {
+    "name": "Judith Nkechinyere Njoku",
+    "last_name": null,
+    "bio": null,
+    "research_area": "Data-driven Intelligent Transportation Systems, Battery Management Systems, Metaverse",
+    "education": "PhD Candidate, Dept. of IT Convergence Engineering, \r\nKumoh National Institute of Technology, Gumi, South Korea \r\n(9.2022- present)\r\n\r\nM.Eng. Electronics Engineering,  Kumoh National Institute of \r\nTechnology, Gumi, South Korea (9.2019- 08.2021)\r\n\r\nB.Eng. Petroleum Engineering, Federal University of \r\nTechnology, Owerri, Nigeria. (12.2009 &#8211; 12.2014)\r\n\r\n\r\nProfessional Membership:\r\n-Institute of Electrical and Electronics Engineering (IEEE)\r\n- IEEE Young Professionals\r\n- IEEE Women In Engineering (WIE)\r\n- IEEE Graduate Student Member (Daejeon Section)\r\n- WomenTech Network - Global Ambassador\r\n- ToastMasters Daegu Section\r\n- SPE - Society of Petroleum Engineers\r\nemail_list: judithnjoku24@kumoh.ac.kr,  judithnjoku24@gmail.com",
+    "career": null,
+    "position": 3,
+    "display_order": 29,
+    "link": null,
+    "email_list": "judithnjoku24@kumoh.ac.kr",
+    "image": "16702197342600.jpg"
+  }
+},
+{
+  "model": "members.bio",
+  "pk": 18,
+  "fields": {
+    "name": "Young June Kwon",
+    "last_name": null,
+    "bio": null,
+    "research_area": "Edge computing, Machine learning",
+    "education": "M.S. Dept. of IT Convergence, Kumoh National Institute of  \r\nTechnology, Gumi, South Korea. ( 03.2022 -  present).\r\n\r\nB.S. Dept. of Control and Robotics Engineering, Kumoh National\r\nInstitute of Technology(03.2018 - 03.2022)",
+    "career": null,
+    "position": 3,
+    "display_order": 34,
+    "link": null,
+    "email_list": "all45654@naver.com",
+    "image": "16443091143200.JPG"
+  }
+},
+{
+  "model": "members.bio",
+  "pk": 19,
+  "fields": {
+    "name": "Paul Michael Custodio",
+    "last_name": null,
+    "bio": null,
+    "research_area": "Power Systems, Computer Vision, Feature Engineering",
+    "education": "M.S. Dept. of Electronics Engineering, Kumoh National Institute \r\nof \r\nTechnology, South Korea. (09.2022 - present)\r\n\r\n\r\nBachelor of Science in Electrical Engineering, Map&#250;a University, \r\n(2014-\r\n2019)",
+    "career": null,
+    "position": 3,
+    "display_order": 34,
+    "link": null,
+    "email_list": "pmbcustodio@kumoh.ac.kr",
+    "image": "16739297636800.JPG"
+  }
+},
+{
+  "model": "members.bio",
+  "pk": 20,
+  "fields": {
+    "name": "Odinachi  Udemezuo Nwankwo",
+    "last_name": null,
+    "bio": null,
+    "research_area": "Embedded Systems,   Computer Vision &  Blockchain (Solidity Smart Contract)",
+    "education": "MSc Candidate, Dept. of IT Convergence Engineering, Kumoh National \r\nInstitute of Technology, Gumi, South Korea (9.2022 - present).\r\n\r\nB.Eng. Electrical and Electronic Engineering,   Federal University \r\nof \r\nTechnology Owerri. Nigeria (2008  --  2014).",
+    "career": null,
+    "position": 3,
+    "display_order": 35,
+    "link": null,
+    "email_list": "odinachifoot@gmail.com, odinachi@kumoh.ac.kr",
+    "image": "16994437181500.jpg"
+  }
+},
+{
+  "model": "members.bio",
+  "pk": 21,
+  "fields": {
+    "name": "Robin Matthew G. Medina",
+    "last_name": null,
+    "bio": null,
+    "research_area": "Metaverse, Speech Recognition, Machine Learning",
+    "education": "M.S. Dept. of IT Convergence Engineering, Kumoh National Institute \r\nof Technology, South Korea. (09.2022 - present)\r\n\r\nBachelor of Science in Informationn Technology, 2015-2019",
+    "career": null,
+    "position": 3,
+    "display_order": 38,
+    "link": null,
+    "email_list": "robinmatthewgmedina@gmail.com",
+    "image": "16614021808300.jpg"
+  }
+},
+{
+  "model": "members.bio",
+  "pk": 22,
+  "fields": {
+    "name": "Ebuka Nkoro",
+    "last_name": null,
+    "bio": null,
+    "research_area": "Metaverse, Machine Learning , Cybersecurity",
+    "education": "MSc Candidate, Dept. of IT Convergence Engineering, Kumoh \r\nNational \r\nInstitute of Technology, Gumi, South Korea (8.2022 - present).\r\n\r\n\r\nB.Tech. Information Technology Department, Federal University of \r\nTechnology Owerri, FUTO. Nigeria (2014  --   2019).\r\n\r\nProfessional Membership: Member Internet Society(ISOC).",
+    "career": null,
+    "position": 3,
+    "display_order": 38,
+    "link": null,
+    "email_list": "nkorochinaechetam@gmail.com",
+    "image": "16702174108800.jpg"
+  }
+},
+{
+  "model": "members.bio",
+  "pk": 23,
+  "fields": {
+    "name": "Izuazu Urslla Uchechi",
+    "last_name": null,
+    "bio": null,
+    "research_area": "Internet of Medical Things",
+    "education": "MSc Candidate, Dept. of IT Convergence Engineering, Kumoh National \r\nInstitute of Technology, Gumi, South Korea (9.2022 - present).\r\n\r\nB.Tech Information Technology, Federal University of Technology, \r\nOwerri\r\n2009-2014",
+    "career": null,
+    "position": 3,
+    "display_order": 39,
+    "link": null,
+    "email_list": "uursla8@gmail.com",
+    "image": "16631733534700.png"
+  }
+},
+{
+  "model": "members.bio",
+  "pk": 24,
+  "fields": {
+    "name": "Md Javed Ahmed Shanto",
+    "last_name": null,
+    "bio": null,
+    "research_area": "Machine Learning, Artificial Intelligence, Machine Execution System",
+    "education": "M.s. Dept. of IT Convergence Engineering, Kumoh National \r\nInstitute of Technology, Gumi, South Korea \r\n(9.2022- present)\r\n\r\nB.Sc. Computer Science and Engineering, International University \r\nof Business Agriculture and Technology,Dhaka, Bangladesh (01.2017 \r\n- 12.2020)",
+    "career": null,
+    "position": 3,
+    "display_order": 40,
+    "link": null,
+    "email_list": "shantoa729@gmail.com",
+    "image": "16632071526400.jpg"
+  }
+},
+{
+  "model": "members.bio",
+  "pk": 25,
+  "fields": {
+    "name": "Mst Ayesha Khatun",
+    "last_name": null,
+    "bio": null,
+    "research_area": "Machine Learning, Deep Learning, Image processing",
+    "education": "M.S student ,department of it convergence engineering,kumoh \r\nnational institute of technology,gumi, south korea(2022-09 to \r\npresent)\r\n\r\nB.Tech in information technology ,EIILM university,india(2015)",
+    "career": null,
+    "position": 3,
+    "display_order": 40,
+    "link": null,
+    "email_list": "ayesha.khatun.17dec@gmail.com",
+    "image": "16654516956300.jpg"
+  }
+},
+{
+  "model": "members.bio",
+  "pk": 26,
+  "fields": {
+    "name": "Mohammed Abubakar Dini",
+    "last_name": null,
+    "bio": null,
+    "research_area": "Deep Learning, Machine Learning, Metaverse",
+    "education": "M.S. Dept. of IT Convergence, Kumoh National Institute of \r\nTechnology, South Korea (present)\r\n\r\nB.S. Dept. Of Mechatronics Engineering, International Islamic \r\nUniversity Malaysia, Malaysia\r\n(graduated in 2022)",
+    "career": null,
+    "position": 3,
+    "display_order": 41,
+    "link": null,
+    "email_list": "mohamedabubakar407@gmail.com",
+    "image": "16950143436100.jpg"
+  }
+},
+{
+  "model": "members.bio",
+  "pk": 27,
+  "fields": {
+    "name": "Gifar Arif Haryadi",
+    "last_name": null,
+    "bio": null,
+    "research_area": "Information and Security, Signal Processing, Machine Learning, Real-time Systems",
+    "education": "M.S. Dept. of IT Convergence, Kumoh National Institute of \r\nTechnology (3.2023 - present)\r\n\r\nB.S. Dept. Of Telecommunication Engineering, Telkom University, \r\nBandung, Indonesia (8.2016 &#8211; 2.2021)",
+    "career": null,
+    "position": 3,
+    "display_order": 42,
+    "link": null,
+    "email_list": "gifararifharyadi@ymail.com",
+    "image": "16777269257100.png"
+  }
+},
+{
+  "model": "members.bio",
+  "pk": 28,
+  "fields": {
+    "name": " Md Facklasur Rahaman",
+    "last_name": null,
+    "bio": null,
+    "research_area": "Machine Learning , Deep Learning , Artificial Intelligence",
+    "education": "M.S. Dept. of IT Convergence, Kumoh National Institute of Technology\r\n(3.2023 -   present)\r\n\r\nB.Sc. Dept. of Electrical and Electronic Engineering, Rajshahi \r\nUniversity of Engineering and Technology , Bangladesh (2016)",
+    "career": null,
+    "position": 3,
+    "display_order": 42,
+    "link": null,
+    "email_list": "facklasurrahaman@gmail.com",
+    "image": "16784162536700.jpg"
+  }
+},
+{
+  "model": "members.bio",
+  "pk": 29,
+  "fields": {
+    "name": "Md Raihan Subhan",
+    "last_name": null,
+    "bio": null,
+    "research_area": "AI, ML, IOT",
+    "education": "IT Convergence \r\nM.S. Dept. of IT Convergence, Kumoh National Institute of Technology\r\n(3.2023 -   present)\r\n\r\nM.S. Dept. of Statistics , Jahangirnagar University \r\n(01,2020- 01,2022)\r\n\r\nB.Sc. Computer Science and Engineering, International University \r\nof Business Agriculture and Technology,Dhaka, Bangladesh (09,2014 - \r\n08,2018)",
+    "career": null,
+    "position": 3,
+    "display_order": 42,
+    "link": null,
+    "email_list": "raihansubhan1994@gmail.com",
+    "image": "16793679563100.jpg"
+  }
+},
+{
+  "model": "members.bio",
+  "pk": 30,
+  "fields": {
+    "name": "Lee Min Seon",
+    "last_name": null,
+    "bio": null,
+    "research_area": "Real-time System, Machine learning",
+    "education": "M.S. Dept. of IT Convergence Engineering, Kumoh National Institute \r\nof \r\nTechnology, Gumi, South Korea (3.2023 - present)\r\nB.S. Dept. of Electronic IT Convergence Major, Kumoh National \r\nInstitute \r\nof Technology (3.2017 - 2.2023)",
+    "career": null,
+    "position": 3,
+    "display_order": 42,
+    "link": null,
+    "email_list": "zlxlrhdwn001@naver.com",
+    "image": "16793748267000.jpg"
+  }
+},
+{
+  "model": "members.bio",
+  "pk": 31,
+  "fields": {
+    "name": "Lee Neul Som",
+    "last_name": null,
+    "bio": null,
+    "research_area": "Real-time systems, Internet of Things, Blockchain",
+    "education": "M.S. Dept. of IT Convergence Engineering, Kumoh National Institute \r\nof Technology, Gumi, South Korea (3.2023 - present)\r\nB.S. Dept. of Electronic IT Convergence Major, Kumoh National \r\nInstitute of Technology (3.2018 - 2.2023)",
+    "career": null,
+    "position": 3,
+    "display_order": 42,
+    "link": null,
+    "email_list": "2eunheng@gmail.com",
+    "image": "16802533027700.jpg"
+  }
+},
+{
+  "model": "members.bio",
+  "pk": 32,
+  "fields": {
+    "name": "Vivian Ukamaka Ihekoronye",
+    "last_name": null,
+    "bio": null,
+    "research_area": "Anti-Drone systems,  Aerial Surveillance Systems , Real-Time Systems and Deep Learning algorithms",
+    "education": "MSc IT-Convergence Engineering, Kumoh National Institute Of \r\nTechnology, Gumi, South Korea. (2021.09~present)\r\n\r\nB.Tech Information Management Technology, Federal University of \r\nTechnology, Owerri, Nigeria. (2009-2014)",
+    "career": null,
+    "position": 3,
+    "display_order": 43,
+    "link": null,
+    "email_list": "ihekoronyevivian@gmail.com",
+    "image": "16527504614600.jpg"
+  }
+}
+]
