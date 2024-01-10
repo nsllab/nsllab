@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'bootstrap5',
     'cloudinary_storage',
     'cloudinary',
+    'custom_filters',
 ]
 
 MIDDLEWARE = [

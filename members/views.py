@@ -4,6 +4,8 @@ from django.contrib.auth import login, logout
 from django.contrib.auth import authenticate, login
 from .forms import MemberCreationForm, LoginForm
 from django.contrib import messages
+from .models import Bio
+from django.views.generic import CreateView, UpdateView, DetailView
 
 def register_user(request):
     if request.method == 'POST':
@@ -42,3 +44,27 @@ def logout_user(request):
     logout(request)
     messages.add_message(request, messages.SUCCESS, f'See you soon {request.user.username}')
     return redirect('publications:journals')
+
+def professors_list(request):
+
+    bio = Bio.objects.filter(position=1)
+    context = {
+        'bios': bio,
+        'total': len(bio)
+        }
+    return render(request, 'members/professors.html', context)
+
+def post_docs_list(request):
+
+    bio = Bio.objects.filter(position=2)
+    context = {
+        'bios': bio,
+        'total': len(bio)
+        }
+    return render(request, 'members/post_docs.html', context)
+
+
+class PostDoctDetailView(DetailView):
+    model = Bio
+    template_name = 'members/post_doc_detail.html'
+    context_object_name = 'post_doc'

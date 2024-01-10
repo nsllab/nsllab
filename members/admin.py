@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
-from .models import Member
+from .models import Member, Bio
 
 class MemberAdmin(UserAdmin):
     # Define your custom configurations for the Member model admin here
@@ -18,3 +18,4 @@ class MemberAdmin(UserAdmin):
 
 # Register your custom Member model with the custom admin class
 admin.site.register(Member, MemberAdmin)
+admin.site.register(Bio)
