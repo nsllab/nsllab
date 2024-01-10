@@ -7,18 +7,21 @@ from cloudinary_storage.storage import MediaCloudinaryStorage
 # Create your models here.
 
 class Member(AbstractUser):
-    address = models.CharField(max_length=150, null=True, blank=True)
+    # address = models.CharField(max_length=150, null=True, blank=True)
     login_cnt = models.IntegerField(default=0) # increments
     restriction_date = models.DateTimeField(null=True, blank=True)
     last_login = models.DateTimeField(null=True, blank=True)
+
+    def get_fullname(self):
+        return f"{self.first_name} {self.last_name}"
 
 # Create your models here.
 
 class Bio(models.Model):
     bio = models.TextField(blank=True, null=True)
     career = models.TextField()
-    name = models.CharField(max_length=255)
-    
+    # name = models.CharField(max_length=255)
+    education = models.TextField()
     position = models.IntegerField(choices=POSITION, default=1, null=False, blank=False)
     link = models.URLField(blank=True, null=True)
     email_list = models.TextField()

@@ -30,6 +30,14 @@
     font-size: 18px;
 }
 
+.navbar-nav .nav-item {
+    background-color: #17a2b8;
+}
+
+.navbar-nav .nav-item:hover {
+    background-color: #343a40;
+}
+
 /* Custom styles for the dropdowns */
 .navbar-nav .dropdown:hover .dropdown-menu {
     display: block;
@@ -234,10 +242,9 @@
 
 /* Style for the journal_title link */
 .table a {
-    color: #007bff; /* Set the link color */
     text-decoration: none; /* Remove underlines from links */
     font-weight: bold; /* Make the text bold */
-    color: #17a2b8;
+    color: #343a40;
 }
 
 .table a:hover {
@@ -247,6 +254,34 @@
 
 
 
+
+/* Add this CSS to your stylesheet or in a <style> tag in your HTML file */
+
+.bio-links a {
+    text-decoration: none;
+    color: #17a2b8;
+    transition: color 0.3s ease;
+}
+
+.bio-links a:hover {
+    color: #17a2b8;
+}
+
+.bio-links i {
+    font-size: 150%;
+    color: #17a2b8;
+}
+
+
+.google-scholar-link a {
+    text-decoration: none; /* Remove underlines from the link */
+    color: #4285f4; /* Set link color to Google's blue color */
+    transition: color 0.3s ease; /* Add a smooth transition effect on color change */
+}
+
+.google-scholar-link a:hover {
+    color: #0d47a1; /* Change link color on hover to a darker shade of blue */
+}
 
 
 
@@ -332,7 +367,7 @@ p {
 
 
 .accounts_form {
-    height: 81vh !important;
+    height: 90vh !important;
     display: flex;
     align-items: center;
     justify-content: center;

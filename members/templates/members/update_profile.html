@@ -1,3 +1,4 @@
+
 {% extends 'base.html' %}
 {% load bootstrap5 %}
 {% block content %}
@@ -7,13 +8,13 @@
             <div class="row">
                 <div class="col-md-6 offset-md-3">
                     <div class="card">
-                        <h5 class="card-header text-light text-center bg-info">Welcome</h5>
+                        <h5 class="card-header text-light text-center bg-info">Update Profile</h5>
                         <div class="card-body">
                             <form method="post">
                                 {% csrf_token %}
-                                {% bootstrap_form form show_label=False%}
+                                {% bootstrap_form form show_label=True%}
                                 <div class="d-grid gap-2">
-                                    {% bootstrap_button "Login" button_type="submit" button_class="btn-outline-info" %}
+                                    {% bootstrap_button "Update Profile" button_type="submit" button_class="btn-outline-info" %}
                                 </div>
                             </form>
                         </div>

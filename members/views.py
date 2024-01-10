@@ -1,11 +1,14 @@
 # views.py
 from django.shortcuts import render, redirect
-from django.contrib.auth import login, logout
-from django.contrib.auth import authenticate, login
-from .forms import MemberCreationForm, LoginForm
+from django.urls import reverse_lazy
+from django.contrib.auth import login, logout, authenticate, login
+from .forms import MemberCreationForm, LoginForm, MemberUpdateForm
 from django.contrib import messages
-from .models import Bio
+from .models import Bio, Member
 from django.views.generic import CreateView, UpdateView, DetailView
+from django.contrib.messages.views import SuccessMessageMixin
+from django.contrib.auth.views import PasswordChangeView
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 def register_user(request):
     if request.method == 'POST':
@@ -44,6 +47,36 @@ def logout_user(request):
     logout(request)
     messages.add_message(request, messages.SUCCESS, f'See you soon {request.user.username}')
     return redirect('publications:journals')
+
+
+class MemberUpdateView(LoginRequiredMixin, UpdateView):
+    model = Member
+    form_class = MemberUpdateForm
+    template_name = 'members/update_profile.html'  # Your template for updating profile
+    success_url = reverse_lazy('pages:index')  # Redirect to the user's profile page
+
+    def get_object(self, queryset=None):
+        return self.request.user  # Get the currently logged-in user
+
+    def form_valid(self, form):
+        username = form.cleaned_data.get('username')
+        existing_user = Member.objects.exclude(pk=self.request.user.pk).filter(username=username).exists()
+        
+        if existing_user:
+            messages.add_message(self.request, messages.ERROR, 'Username already exists. Please choose a different username.')
+            return self.form_invalid(form)
+        
+        return super().form_valid(form)
+
+class MemberChangePasswordView(LoginRequiredMixin, SuccessMessageMixin, PasswordChangeView):
+    template_name = 'members/change_password.html'  # Your template for changing password
+    success_url = reverse_lazy('pages:index')  # Redirect to the user's profile page
+    success_message = "Your password was successfully updated."
+
+    def get_form_kwargs(self):
+        kwargs = super().get_form_kwargs()
+        kwargs['user'] = self.request.user
+        return kwargs
 
 def professors_list(request):
 

@@ -11,4 +11,6 @@ urlpatterns = [
     path('professors/', views.professors_list, name="professors_list"),
     path('post_docs/', views.post_docs_list, name="post_docs_list"),
     path('post_docs/<int:pk>', views.PostDoctDetailView.as_view(), name="post_docs_detail"),
+    path('profile/update/', views.MemberUpdateView.as_view(), name='update_profile'),
+    path('<int:pk>/password/',views. MemberChangePasswordView.as_view(), name='change_password'),
 ]

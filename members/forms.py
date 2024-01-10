@@ -1,12 +1,12 @@
 # forms.py
 from django import forms
-from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.forms import UserCreationForm, UserChangeForm
 from .models import Member
 
 class MemberCreationForm(UserCreationForm):
     class Meta:
         model = Member
-        fields = ['username', 'first_name', 'last_name', 'email', 'password1', 'password2', 'address']
+        fields = ['username', 'first_name', 'last_name', 'email', 'password1', 'password2']
 
     def save(self, commit=True):
         user = super().save(commit=False)
@@ -19,6 +19,11 @@ class MemberCreationForm(UserCreationForm):
             user.save()
 
         return user
+
+class MemberUpdateForm(UserChangeForm):
+    class Meta:
+        model = Member
+        fields = ['username', 'first_name', 'last_name', 'email']
 
 class LoginForm(forms.Form):
     username = forms.CharField(max_length=150)
