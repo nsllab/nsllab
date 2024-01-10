@@ -18,15 +18,20 @@ class Member(AbstractUser):
 # Create your models here.
 
 class Bio(models.Model):
+    name = models.CharField('First Name', max_length=255)
+    last_name = models.CharField(max_length=255, null=True, blank=True)
     bio = models.TextField(blank=True, null=True)
-    career = models.TextField()
-    # name = models.CharField(max_length=255)
+    research_area = models.TextField()
     education = models.TextField()
+    career = models.TextField()
     position = models.IntegerField(choices=POSITION, default=1, null=False, blank=False)
     link = models.URLField(blank=True, null=True)
     email_list = models.TextField()
     image = models.ImageField(upload_to='bio_images/', storage=MediaCloudinaryStorage, null=True, blank=True)
-    user = models.OneToOneField(Member, on_delete=models.DO_NOTHING, related_name='bio', null=True, blank=True)
+    # user = models.OneToOneField(Member, on_delete=models.DO_NOTHING, related_name='bio', null=True, blank=True)
 
+
+    def get_fullname(self):
+        return f"{self.name} {self.last_name}"
     def __str__(self):
         return self.name
