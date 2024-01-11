@@ -108,7 +108,7 @@ class FullTimeListView(ListView):
     context_object_name = 'bios'
 
     def get_queryset(self):
-        return Bio.objects.filter(position=3)
+        return Bio.objects.filter(position=3).order_by('display_order')
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)

@@ -1,7 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
 from publications.choices import POSITION
-from cloudinary_storage.storage import MediaCloudinaryStorage
+# from cloudinary_storage.storage import MediaCloudinaryStorage
 # import
 
 # Create your models here.
@@ -28,7 +28,7 @@ class Bio(models.Model):
     display_order = models.IntegerField()
     link = models.URLField(blank=True, null=True)
     email_list = models.TextField()
-    image = models.ImageField(upload_to='bio_images/', storage=MediaCloudinaryStorage, null=True, blank=True)
+    image = models.ImageField(upload_to='bio_images/', null=True, blank=True)
     # date_joined 
     # user = models.OneToOneField(Member, on_delete=models.DO_NOTHING, related_name='bio', null=True, blank=True)
 
