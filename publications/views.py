@@ -156,6 +156,18 @@ class ConferenceCreateView(LoginRequiredMixin, SuccessMessageMixin, CreateView):
         return super().form_valid(form)
 
 
+class ConferenceUpdateView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
+    login_url = "/members/login/"
+    model = Conference
+    form_class = ConferenceUpdateForm
+    template_name = 'publications/conferences/update.html'
+    success_url = reverse_lazy('publications:conferences')
+    success_message =  "Updated successfully"
+
+    def form_valid(self, form):
+        form.instance.writer = self.request.user
+        return super().form_valid(form)
+
 class ConferenceDetailView(DetailView):
     model = Conference
     template_name = 'publications/conferences/conference_details.html'
