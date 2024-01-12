@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
+# from hello_django.storage_backends import PublicMediaStorage, PrivateMediaStorage
 from publications.choices import POSITION
 # from cloudinary_storage.storage import MediaCloudinaryStorage
 # import
