@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'pages',
     'members',
     'bootstrap5',
+    'storages',
     # 'cloudinary_storage',
     # 'cloudinary',
     'custom_filters',
@@ -155,19 +156,37 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
-STATIC_URL = 'static/'
+USE_SPACES = config('USE_SPACES') == 'TRUE'
 
-STATIC_ROOT = BASE_DIR / 'staticfiles'
+if USE_SPACES:
+    # settings   DO00BDGFHAVUNFCK6M29  JhDkVnOAzFB44QNnYlY8Bzddo/E4ncmxOQ0rk1m4Jww (ssecret)
+    AWS_ACCESS_KEY_ID = config('AWS_ACCESS_KEY_ID')
+    AWS_SECRET_ACCESS_KEY = config('AWS_SECRET_ACCESS_KEY')
+    AWS_STORAGE_BUCKET_NAME = config('AWS_STORAGE_BUCKET_NAME')
+    AWS_DEFAULT_ACL = 'public-read'
+    AWS_S3_ENDPOINT_URL = 'https://nyc3.digitaloceanspaces.com'
+    AWS_S3_OBJECT_PARAMETERS = {'CacheControl': 'max-age=86400'}
+    # static settings
+    AWS_LOCATION = 'static'
+    STATIC_URL = f'https://{AWS_S3_ENDPOINT_URL}/{AWS_LOCATION}/'
+    STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+else:
+    STATIC_URL = '/static/'
+    STATIC_ROOT = BASE_DIR / 'staticfiles'
+    STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
+
+# STATIC_URL = 'static/'
+
+# STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 STATICFILES_DIRS = [
     BASE_DIR / "static",
 ]
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
 
-# MEDIA_ROOT = BASE_DIR / "media"
-MEDIA_ROOT = "/var/data/nslwebsite.onrender.com/media"
-MEDIA_URL = '/media/'
+
+MEDIA_ROOT = BASE_DIR / "media"
+MEDIA_URL = '/mediafiles/'
 
 # CLOUDINARY_STORAGE = {
 #     'CLOUD_NAME': config('CLOUDINARY_CLOUD_NAME'),
