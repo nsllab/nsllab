@@ -49,11 +49,12 @@ def logout_user(request):
     return redirect('publications:journals')
 
 
-class MemberUpdateView(LoginRequiredMixin, UpdateView):
+class MemberUpdateView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
     model = Member
     form_class = MemberUpdateForm
     template_name = 'members/update_profile.html'  # Your template for updating profile
     success_url = reverse_lazy('pages:index')  # Redirect to the user's profile page
+    success_message = "Profile successfully updated."
 
     def get_object(self, queryset=None):
         return self.request.user  # Get the currently logged-in user
