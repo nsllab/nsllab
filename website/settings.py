@@ -184,6 +184,13 @@ else:
     MEDIA_ROOT = BASE_DIR / "media"
     MEDIA_URL = '/mediafiles/'
 
+
+# STATIC_URL = 'static/'
+# STATIC_ROOT = BASE_DIR / 'staticfiles'
+# STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
+# MEDIA_ROOT = BASE_DIR / "media"
+# MEDIA_URL = '/mediafiles/'
+
 # STATIC_URL = 'static/'
 
 # STATIC_ROOT = BASE_DIR / 'staticfiles'

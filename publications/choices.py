@@ -20,5 +20,8 @@ POSITION = [
     (3, "FULL-TIME"),
     (4, "PART-TIME"),
     (5, "ADVISERS"),
-    (6, "ALUMNI"),
+    (6, "ALUMNI (Graduate Students)"),
+    (7, "ALUMNI (POSTDOC)"),
+    (8, "Undergraduates"),
+    (9, "Visiting Researchers"),  
 ]
