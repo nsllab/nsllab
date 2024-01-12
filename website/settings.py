@@ -58,7 +58,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    # "whitenoise.middleware.WhiteNoiseMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -157,6 +157,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 USE_SPACES = config('USE_SPACES')
+print(USE_SPACES)
 
 if USE_SPACES:
 
@@ -176,11 +177,10 @@ if USE_SPACES:
     MEDIA_URL = f'https://{AWS_S3_ENDPOINT_URL}/{MEDIA_LOCATION}/'
     DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
-
 else:
-    STATIC_URL = '/static/'
+    STATIC_URL = 'static/'
     STATIC_ROOT = BASE_DIR / 'staticfiles'
-    # STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
+    STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
     MEDIA_ROOT = BASE_DIR / "media"
     MEDIA_URL = '/mediafiles/'
 

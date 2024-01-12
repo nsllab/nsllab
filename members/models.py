@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth.models import AbstractUser
 # from hello_django.storage_backends import PublicMediaStorage, PrivateMediaStorage
 from publications.choices import POSITION
+from django.core.files.storage import default_storage
 # from cloudinary_storage.storage import MediaCloudinaryStorage
 # import
 
@@ -30,6 +31,13 @@ class Bio(models.Model):
     link = models.URLField(blank=True, null=True)
     email_list = models.TextField()
     image = models.ImageField(upload_to='bio_images/', null=True, blank=True)
+
+    def save(self, *args, **kwargs):
+        if self.pk:
+            old_instance = Bio.objects.get(pk=self.pk)
+            if old_instance.image:
+                default_storage.delete(old_instance.image.name)
+
     # date_joined 
     # user = models.OneToOneField(Member, on_delete=models.DO_NOTHING, related_name='bio', null=True, blank=True)
 
