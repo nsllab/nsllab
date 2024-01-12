@@ -12,7 +12,7 @@ class JournalUpdateForm(forms.ModelForm):
     class Meta:
         model = Journal
         # fields = '__all__'  # You can specify the fields you want to include in the form
-        exclude = ['write_date', 'update_date', 'visit']
+        exclude = ['write_date', 'update_date', 'visit', 'writer',]
 
         # widgets = {
         #     'ack': forms.TextInput(attrs={'required': False}),

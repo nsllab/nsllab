@@ -61,25 +61,38 @@ class JournalCreateView(LoginRequiredMixin, SuccessMessageMixin, CreateView):
         form.instance.writer = self.request.user  # Set the writer to the current user
         return super().form_valid(form)
 
-@login_required(login_url="/members/login")
-def journal_update(request, pk):
-    journal = get_object_or_404(Journal, pk=pk)
 
-    if request.method == 'POST':
-        form = JournalUpdateForm(request.POST, request.FILES, instance=journal)
+class JournalUpdateView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
+    login_url = "/members/login/"
+    model = Journal
+    form_class = JournalUpdateForm
+    template_name = 'publications/journals/update.html'
+    success_url = reverse_lazy('publications:journals')
+    success_message =  "Updated successfully"
+
+    def form_valid(self, form):
+        form.instance.writer = self.request.user
+        return super().form_valid(form)
+
+# @login_required(login_url="/members/login")
+# def journal_update(request, pk):
+#     journal = get_object_or_404(Journal, pk=pk)
+
+#     if request.method == 'POST':
+#         form = JournalUpdateForm(request.POST, request.FILES, instance=journal)
         
-        if form.is_valid():
-            form.save()
-            messages.add_message(request, messages.SUCCESS, 'Update Successful')
-            return redirect('publications:journals')
-    else:
-        form = JournalUpdateForm(instance=journal)
+#         if form.is_valid():
+#             form.save()
+#             messages.add_message(request, messages.SUCCESS, 'Update Successful')
+#             return redirect('publications:journals')
+#     else:
+#         form = JournalUpdateForm(instance=journal)
 
-    context = {
-        'form': form,
-    }
+#     context = {
+#         'form': form,
+#     }
 
-    return render(request, 'publications/journals/update.html', context)
+#     return render(request, 'publications/journals/update.html', context)
 
 
 class JournalDetailView(DetailView):

@@ -78,14 +78,27 @@ class MemberChangePasswordView(LoginRequiredMixin, SuccessMessageMixin, Password
         kwargs['user'] = self.request.user
         return kwargs
 
-def professors_list(request):
+# def professors_list(request):
 
-    bio = Bio.objects.filter(position=1)
-    context = {
-        'bios': bio,
-        'total': len(bio)
-        }
-    return render(request, 'members/professors.html', context)
+#     bio = Bio.objects.filter(position=1)
+#     context = {
+#         'bios': bio,
+#         'total': len(bio)
+#         }
+#     return render(request, 'members/professors.html', context)
+
+class ProfessorsListView(ListView):
+    model = Bio
+    template_name = 'members/professors.html'
+    context_object_name = 'bios'
+
+    def get_queryset(self):
+        return Bio.objects.filter(position=1).order_by('display_order')
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['total'] = self.get_queryset().count()
+        return context
 
 
 class PostDocsListView(ListView):
