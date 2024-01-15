@@ -33,7 +33,7 @@
               
               
             </td>
-            {% if user.is_authenticated %}
+            {% if user.is_authenticated and request.user == journal.writer %}
             <td>
               <a
                 href="{% url 'publications:journal_update' pk=journal.pk %}""

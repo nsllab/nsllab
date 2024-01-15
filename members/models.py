@@ -20,16 +20,16 @@ class Member(AbstractUser):
 # Create your models here.
 
 class Bio(models.Model):
-    name = models.CharField('First Name', max_length=255)
-    last_name = models.CharField(max_length=255, null=True, blank=True)
+    name = models.CharField('Full Name', max_length=255)
+    # last_name = models.CharField(max_length=255, null=True, blank=True)
     bio = models.TextField(blank=True, null=True)
-    research_area = models.TextField()
+    research_area = models.CharField()
     education = models.TextField()
     career = models.TextField(null=True, blank=True)
     position = models.IntegerField(choices=POSITION, default=1, null=False, blank=False)
     display_order = models.IntegerField()
     link = models.URLField(blank=True, null=True)
-    email_list = models.TextField()
+    email_list = models.CharField('Email')
     image = models.ImageField(upload_to='bio_images/', null=True, blank=True)
 
     def save(self, *args, **kwargs):
@@ -43,7 +43,7 @@ class Bio(models.Model):
     # user = models.OneToOneField(Member, on_delete=models.DO_NOTHING, related_name='bio', null=True, blank=True)
 
 
-    def get_fullname(self):
-        return f"{self.name} {self.last_name}"
-    def __str__(self):
-        return self.name
+    # def get_fullname(self):
+    #     return f"{self.name} {self.last_name}"
+    # def __str__(self):
+    #     return self.name

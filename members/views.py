@@ -2,7 +2,7 @@
 from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
 from django.contrib.auth import login, logout, authenticate, login
-from .forms import MemberCreationForm, LoginForm, MemberUpdateForm
+from .forms import MemberCreationForm, LoginForm, MemberUpdateForm, BioUpdateForm
 from django.contrib import messages
 from .models import Bio, Member
 from django.views.generic import CreateView, UpdateView, DetailView, ListView
@@ -21,7 +21,7 @@ def register_user(request):
     else:
         form = MemberCreationForm()
 
-    return render(request, 'members/registration.html', {'form': form})
+    return render(request, 'members/registration/registration.html', {'form': form})
 
 
 def login_user(request):
@@ -41,7 +41,7 @@ def login_user(request):
     else:
         form = LoginForm()
 
-    return render(request, 'members/login.html', {'form': form})
+    return render(request, 'members/registration/login.html', {'form': form})
 
 def logout_user(request):
     logout(request)
@@ -52,7 +52,7 @@ def logout_user(request):
 class MemberUpdateView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
     model = Member
     form_class = MemberUpdateForm
-    template_name = 'members/update_profile.html'  # Your template for updating profile
+    template_name = 'members/registration/update_profile.html'  # Your template for updating profile
     success_url = reverse_lazy('pages:index')  # Redirect to the user's profile page
     success_message = "Profile successfully updated."
 
@@ -70,7 +70,7 @@ class MemberUpdateView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
         return super().form_valid(form)
 
 class MemberChangePasswordView(LoginRequiredMixin, SuccessMessageMixin, PasswordChangeView):
-    template_name = 'members/change_password.html'  # Your template for changing password
+    template_name = 'members/registration/change_password.html'  # Your template for changing password
     success_url = reverse_lazy('pages:index')  # Redirect to the user's profile page
     success_message = "Your password was successfully updated."
 
@@ -90,7 +90,7 @@ class MemberChangePasswordView(LoginRequiredMixin, SuccessMessageMixin, Password
 
 class ProfessorsListView(ListView):
     model = Bio
-    template_name = 'members/professors.html'
+    template_name = 'members/people/professors.html'
     context_object_name = 'bios'
 
     def get_queryset(self):
@@ -104,21 +104,27 @@ class ProfessorsListView(ListView):
 
 class PostDocsListView(ListView):
     model = Bio
-    template_name = 'members/post_docs.html'
+    template_name = 'members/people/post_docs.html'
     context_object_name = 'bios'
 
     def get_queryset(self):
-        return Bio.objects.filter(position=2)
+        return Bio.objects.filter(position=2).order_by('display_order')
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['total'] = self.get_queryset().count()
         return context
 
+class PostDocDetailView(DetailView):
+    model = Bio
+    template_name = 'members/people/post_doc_detail.html'
+    context_object_name = 'post_doc'
+
+
 
 class FullTimeListView(ListView):
     model = Bio
-    template_name = 'members/full_time.html'
+    template_name = 'members/people/full_time.html'
     context_object_name = 'bios'
 
     def get_queryset(self):
@@ -130,12 +136,96 @@ class FullTimeListView(ListView):
         return context
 
 
-class PostDoctDetailView(DetailView):
-    model = Bio
-    template_name = 'members/post_doc_detail.html'
-    context_object_name = 'post_doc'
-
 class FullTimeDetailView(DetailView):
     model = Bio
-    template_name = 'members/full_time_detail.html'
+    template_name = 'members/people/full_time_detail.html'
     context_object_name = 'full_time'
+
+
+class PartTimeListView(ListView):
+    model = Bio
+    template_name = 'members/people/part_time.html'
+    context_object_name = 'bios'
+
+    def get_queryset(self):
+        return Bio.objects.filter(position=4).order_by('display_order')
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['total'] = self.get_queryset().count()
+        return context
+
+
+class VisitingListView(ListView):
+    model = Bio
+    template_name = 'members/people/visiting.html'
+    context_object_name = 'bios'
+
+    def get_queryset(self):
+        return Bio.objects.filter(position=9).order_by('display_order')
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['total'] = self.get_queryset().count()
+        return context
+
+class AlumniPostDocListView(ListView):
+    model = Bio
+    template_name = 'members/people/post_doc_alumni.html'
+    context_object_name = 'bios'
+
+    def get_queryset(self):
+        return Bio.objects.filter(position=7).order_by('display_order')
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['total'] = self.get_queryset().count()
+        return context
+
+class AlumniGraduateListView(ListView):
+    model = Bio
+    template_name = 'members/people/graduate_alumni.html'
+    context_object_name = 'bios'
+
+    def get_queryset(self):
+        return Bio.objects.filter(position=6).order_by('display_order')
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['total'] = self.get_queryset().count()
+        return context
+
+class AdvisersListView(ListView):
+    model = Bio
+    template_name = 'members/people/advisers.html'
+    context_object_name = 'bios'
+
+    def get_queryset(self):
+        return Bio.objects.filter(position=5).order_by('display_order')
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['total'] = self.get_queryset().count()
+        return context
+
+class UnderGraduateListView(ListView):
+    model = Bio
+    template_name = 'members/people/undergraduate.html'
+    context_object_name = 'bios'
+
+    def get_queryset(self):
+        return Bio.objects.filter(position=8).order_by('display_order')
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['total'] = self.get_queryset().count()
+        return context
+
+
+class BioUpdateView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
+    login_url = "/members/login/"
+    model = Bio
+    form_class = BioUpdateForm
+    template_name = 'members/bios/bio_update.html'
+    success_url = reverse_lazy('publications:conferences')
+    success_message =  "Updated successfully"

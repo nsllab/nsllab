@@ -15,7 +15,10 @@ class MemberAdmin(UserAdmin):
 
 # Unregister the default User model
 # admin.site.unregister(Member)
+class BioAdmin(admin.ModelAdmin):
+    list_display = ('name', 'display_order', 'position',)
+    search_fields = ['name', 'position']
+    
 
-# Register your custom Member model with the custom admin class
 admin.site.register(Member, MemberAdmin)
-admin.site.register(Bio)
+admin.site.register(Bio, BioAdmin)

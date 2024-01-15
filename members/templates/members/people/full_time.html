@@ -1,0 +1,104 @@
+{% extends 'base.html' %}
+{% load bootstrap5 %}
+{% load custom_filters %}
+
+{% block content %}
+{% include 'partials/_banner.html' with heading="Full-Time Graduate Researchers" %}
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-lg-3 d-sm-none d-md-block ">
+                {% include 'partials/_members.html' %}
+            </div>
+            <div class="col-lg-9">
+                {% if bios %}
+                {% for bio in bios %}
+                <div class="d-flex mb-5">
+                    <div class="flex-shrink-0">
+                      <img class="img-fluid" src="{{ bio.image.url }}" style="width: 157px;" alt="...">
+                    </div>
+                    <div class="flex-grow-1 ms-3">
+                      <div class="card shadow-lg">
+                        <div class="card-header bg-info d-flex justify-content-between">
+                            <h5 class="">{{ bio.name }}</h5>
+                            <p class="card-text"> {% if user.is_authenticated %} <a class="btn btn-outline-dark btn-sm" href="{% url 'members:bio_update' pk=bio.pk %}">Edit</a> {% endif %} </p>
+                        </div>
+                        <div class="card-body">
+                            {% if bio.bio %}
+                                <p class="card-text"><span class="fw-bold">Bio:</span> {{ bio.bio }}</p>
+                            {% endif %}
+                            <hr class="border border-info">
+                            {% if bio.research_area %}
+                            <p class="card-text">
+                                <span class="fw-bold">Research Areas:</span> {% with bio.research_area|split_string:',' as research_area_list %}
+                                <ul class="list-group">
+                                    {% for research_area in research_area_list %}
+                                        <li class="list-group-item">{{ research_area }}</li>
+                                    {% endfor %}
+                                </ul>
+                                {% endwith %}
+                            </p>
+                            {% endif %}
+
+                            <hr class="border border-info">
+
+                            {% if bio.career %}
+                            <p class="card-text">
+                                <span class="fw-bold">Career:</span> {% with bio.career|split_string:',' as career_list %}
+                                <ul class="list-group">
+                                    {% for career in career_list %}
+                                        <li class="list-group-item">{{ career }}</li>
+                                    {% endfor %}
+                                </ul>
+                                {% endwith %}
+                            </p>
+                            <hr class="border border-info">
+                            {% endif %}
+                            <!-- <p class="card-text">
+                                {{ bio.education }}
+                            </p> -->
+                            <p class="card-text">
+                                <span class="fw-bold">Education:</span> {% with bio.education|split_string:'/' as education_list %}
+                                <ul class="list-group">
+                                    {% for education in education_list %}
+                                        <li class="list-group-item">{{ education }}</li>
+                                    {% endfor %}
+                                </ul>
+                                {% endwith %}
+                            </p>
+                            <p class="card-text"> {% if user.is_authenticated %} <a class="btn btn-outline-info" href="{% url 'members:bio_update' pk=bio.pk %}">Edit</a> {% endif %} </p>
+                        </div>
+                        
+                        <div class="card-footer d-flex justify-content-between bio-links">
+                            {% with bio.email_list|split_string:',' as email_list %}
+                                <span class="fw-bold">
+                                    <i class="fa-solid fa-envelope"></i>
+                                    {% for email in email_list %}
+                                        <a href="mailto:{{ email }}">{{ email }} |</a>
+                                    {% endfor %}
+                                </span>
+                            {% endwith %}
+                            
+                            {% if bio.link %}
+                                <span class="fw-bold">
+                                    
+                                    <!-- <a href="{{ bio.link }}" target="_blank"><i class="fa-brands fa-google-scholar"></i></a> -->
+                                    <a href="{{ bio.link }}" target="_blank"><i class="fas fa-globe"></i> View more</a>
+                                    </span>
+                                </span>
+                            {% endif %}
+                                
+                        </div>
+                        
+                        
+                      </div>
+                    </div>
+                  </div>
+                {% endfor %}
+
+                {% else %}
+                  <p>No bio</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

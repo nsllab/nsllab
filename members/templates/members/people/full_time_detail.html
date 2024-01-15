@@ -6,7 +6,7 @@
 {% block content %}
 <div class="container-fluid text-center members-banner bg-info">
     
-    <img class="rounded-circle" src="https://placehold.co/250" alt="">
+    <img class="rounded-circle" src="{{ full_time.image.url }}"  style="height: 280px;" alt="">
     <h3 class="pt-3">{{ full_time.name }}</h3>
 </div>
 
@@ -24,13 +24,27 @@
                       </nav>
                 </div>
                 <div class="card-body">
-                    <p class="card-text"><span class="fw-bold">Bio:</span> {{ bio.bio }}</p>
+                    <p class="card-text"><span class="fw-bold">Bio:</span> {{ full_time.bio }}</p>
                     <hr class="hr">
+                    {% if full_time.career %}
                     <p class="card-text">
-                        <span class="fw-bold">Career / Education:</span> {% with bio.career|split_string:',' as career_list %}
+                        <span class="fw-bold">Career / Education:</span> {% with full_time.career|split_string:',' as career_list %}
                         <ul class="list-group">
                             {% for career in career_list %}
                                 <li class="list-group-item">{{ career }}</li>
+                            {% endfor %}
+                        </ul>
+                        {% endwith %}
+                    </p>
+                    {% endif %}
+
+                    
+
+                    <p class="card-text">
+                        <span class="fw-bold">Education:</span> {% with full_time.education|split_string:',' as education_list %}
+                        <ul class="list-group">
+                            {% for education in education_list %}
+                                <li class="list-group-item">{{ education }}</li>
                             {% endfor %}
                         </ul>
                         {% endwith %}
@@ -48,6 +62,22 @@
                             
                         </tbody>
                     </table>
+                </div>
+                <div class="card-footer d-flex justify-content-between bio-links">  
+                    {% with bio.email_list|split_string:',' as email_list %}
+                        <span class="fw-bold">
+                            <i class="fa-solid fa-envelope"></i>
+                            {% for email in email_list %}
+                                <a href="mailto:{{ email }}">{{ email }} |</a>
+                            {% endfor %}
+                        </span>
+                    {% endwith %}
+                    
+                        <span class="fw-bold">
+                            <i class="fa-brands fa-google-scholar"></i>
+                            <a href="{{ bio.link }}">Google Scholar</a>
+                        </span>
+                        
                 </div>
             </div>
         </div>

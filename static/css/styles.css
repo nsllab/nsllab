@@ -264,7 +264,7 @@
 }
 
 .bio-links a:hover {
-    color: #17a2b8;
+    color: #343a40;
 }
 
 .bio-links i {
@@ -272,16 +272,6 @@
     color: #17a2b8;
 }
 
-
-.google-scholar-link a {
-    text-decoration: none; /* Remove underlines from the link */
-    color: #4285f4; /* Set link color to Google's blue color */
-    transition: color 0.3s ease; /* Add a smooth transition effect on color change */
-}
-
-.google-scholar-link a:hover {
-    color: #0d47a1; /* Change link color on hover to a darker shade of blue */
-}
 
 
 

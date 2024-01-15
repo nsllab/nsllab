@@ -4,8 +4,8 @@ from .models import Journal, Conference
 class JournalForm(forms.ModelForm):
     class Meta:
         model = Journal
-        # fields = '__all__'  # You can specify the fields you want to include in the form
-        exclude = ['writer', 'write_date', 'update_date', 'ack', 'visit', 'pub_year']
+        fields = ['title', 'journal_name', 'abstract', 'status', 'journal_type', 'file']
+        # exclude = ['writer', 'write_date', 'update_date', 'ack', 'visit', 'pub_year']
 
 
 class JournalUpdateForm(forms.ModelForm):
@@ -29,7 +29,7 @@ class ConferenceUpdateForm(forms.ModelForm):
     class Meta:
         model = Conference
         # fields = '__all__'  # You can specify the fields you want to include in the form
-        exclude = ['write_date', 'update_date', 'visit']
+        exclude = ['write_date', 'update_date', 'visit', 'writer']
 
         # widgets = {
         #     'ack': forms.TextInput(attrs={'required': False}),

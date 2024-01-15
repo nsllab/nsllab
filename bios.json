@@ -1,7 +1,6 @@
 [
 {
   "model": "members.bio",
-  "pk": 233,
   "fields": {
     "name": "Cha Joong Hyuck",
     "last_name": null,
@@ -18,7 +17,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 234,
   "fields": {
     "name": "Da Hye Kim",
     "last_name": null,
@@ -35,7 +33,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 235,
   "fields": {
     "name": "Philip Tobianto Daely",
     "last_name": null,
@@ -52,7 +49,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 236,
   "fields": {
     "name": "Mohtasin Golam",
     "last_name": null,
@@ -69,7 +65,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 237,
   "fields": {
     "name": "Ali Aouto",
     "last_name": null,
@@ -86,7 +81,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 238,
   "fields": {
     "name": "Love Ahakonye",
     "last_name": null,
@@ -103,7 +97,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 239,
   "fields": {
     "name": "Made Adi Paramartha Putra",
     "last_name": null,
@@ -120,7 +113,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 240,
   "fields": {
     "name": "Ahmad Zainudin",
     "last_name": null,
@@ -137,7 +129,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 241,
   "fields": {
     "name": "Esmot Ara Tuli",
     "last_name": null,
@@ -154,7 +145,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 242,
   "fields": {
     "name": "Hyeong Jin Kim",
     "last_name": null,
@@ -171,7 +161,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 243,
   "fields": {
     "name": "Minhui Jang",
     "last_name": null,
@@ -188,7 +177,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 244,
   "fields": {
     "name": "Etobi Damian Tita",
     "last_name": null,
@@ -205,7 +193,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 245,
   "fields": {
     "name": "Amaizu Gabriel",
     "last_name": null,
@@ -222,7 +209,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 246,
   "fields": {
     "name": "Judith Nkechinyere Njoku",
     "last_name": null,
@@ -239,7 +225,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 247,
   "fields": {
     "name": "Young June Kwon",
     "last_name": null,
@@ -256,7 +241,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 248,
   "fields": {
     "name": "Paul Michael Custodio",
     "last_name": null,
@@ -273,7 +257,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 249,
   "fields": {
     "name": "Odinachi  Udemezuo Nwankwo",
     "last_name": null,
@@ -290,7 +273,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 250,
   "fields": {
     "name": "Robin Matthew G. Medina",
     "last_name": null,
@@ -307,7 +289,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 251,
   "fields": {
     "name": "Ebuka Nkoro",
     "last_name": null,
@@ -324,7 +305,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 252,
   "fields": {
     "name": "Izuazu Urslla Uchechi",
     "last_name": null,
@@ -341,7 +321,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 253,
   "fields": {
     "name": "Md Javed Ahmed Shanto",
     "last_name": null,
@@ -358,7 +337,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 254,
   "fields": {
     "name": "Mst Ayesha Khatun",
     "last_name": null,
@@ -375,7 +353,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 255,
   "fields": {
     "name": "Mohammed Abubakar Dini",
     "last_name": null,
@@ -392,7 +369,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 256,
   "fields": {
     "name": "Gifar Arif Haryadi",
     "last_name": null,
@@ -409,7 +385,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 257,
   "fields": {
     "name": " Md Facklasur Rahaman",
     "last_name": null,
@@ -426,7 +401,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 258,
   "fields": {
     "name": "Md Raihan Subhan",
     "last_name": null,
@@ -443,7 +417,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 259,
   "fields": {
     "name": "Lee Min Seon",
     "last_name": null,
@@ -460,7 +433,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 260,
   "fields": {
     "name": "Lee Neul Som",
     "last_name": null,
@@ -477,7 +449,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 261,
   "fields": {
     "name": "Vivian Ukamaka Ihekoronye",
     "last_name": null,
@@ -494,7 +465,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 262,
   "fields": {
     "name": "Seung-Ki, Lee",
     "last_name": null,
@@ -511,7 +481,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 263,
   "fields": {
     "name": "Dong-Hyuk Choi",
     "last_name": null,
@@ -528,7 +497,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 264,
   "fields": {
     "name": "Ki-hyup Kwon",
     "last_name": null,
@@ -545,7 +513,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 265,
   "fields": {
     "name": "Jung-Il, Lee (ETRI)",
     "last_name": null,
@@ -562,7 +529,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 266,
   "fields": {
     "name": "Ji-Won, Jung",
     "last_name": null,
@@ -579,7 +545,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 267,
   "fields": {
     "name": "Pulat, Matkurbanov S (GMG)",
     "last_name": null,
@@ -596,7 +561,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 268,
   "fields": {
     "name": "Joon-Woo Kim",
     "last_name": null,
@@ -613,7 +577,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 269,
   "fields": {
     "name": "Yun-Seop, Kim",
     "last_name": null,
@@ -630,7 +593,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 270,
   "fields": {
     "name": "Jun-Ho, Seo",
     "last_name": null,
@@ -647,7 +609,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 271,
   "fields": {
     "name": "Kyu-Ho, Lee (Nikon Precision Co.)",
     "last_name": null,
@@ -664,7 +625,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 272,
   "fields": {
     "name": "Jong-Chan, Lee (CoreLogic Co.)",
     "last_name": null,
@@ -681,7 +641,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 273,
   "fields": {
     "name": "Dae-Kyu, Kim (LG Display)",
     "last_name": null,
@@ -698,7 +657,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 274,
   "fields": {
     "name": "Nguyen Quoc Dinh",
     "last_name": null,
@@ -715,7 +673,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 275,
   "fields": {
     "name": "Sung-Uk Kim",
     "last_name": null,
@@ -732,7 +689,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 276,
   "fields": {
     "name": "Ho-Gyun Lee",
     "last_name": null,
@@ -749,7 +705,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 277,
   "fields": {
     "name": "Dong-Hee, Kim",
     "last_name": null,
@@ -766,7 +721,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 278,
   "fields": {
     "name": "Hyun-Woo, Kim",
     "last_name": null,
@@ -783,7 +737,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 279,
   "fields": {
     "name": "Jun-Ho Kim",
     "last_name": null,
@@ -800,7 +753,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 280,
   "fields": {
     "name": "Teemo",
     "last_name": null,
@@ -817,7 +769,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 281,
   "fields": {
     "name": "Favian Dewanta",
     "last_name": null,
@@ -834,7 +785,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 282,
   "fields": {
     "name": "Seonggil Heo",
     "last_name": null,
@@ -851,7 +801,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 283,
   "fields": {
     "name": "Mingon Kim",
     "last_name": null,
@@ -868,7 +817,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 284,
   "fields": {
     "name": "Pham Tran Anh Quang",
     "last_name": null,
@@ -885,7 +833,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 285,
   "fields": {
     "name": "Eung-Soo Lee",
     "last_name": null,
@@ -902,7 +849,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 286,
   "fields": {
     "name": "Jae-Hyung, Lee",
     "last_name": null,
@@ -919,7 +865,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 287,
   "fields": {
     "name": "Soo-Ro, Kim",
     "last_name": null,
@@ -936,7 +881,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 288,
   "fields": {
     "name": "Nguyen Duc Son",
     "last_name": null,
@@ -953,7 +897,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 289,
   "fields": {
     "name": "Tung Thanh Le",
     "last_name": null,
@@ -970,7 +913,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 290,
   "fields": {
     "name": "Handityo Aulia Putra",
     "last_name": null,
@@ -987,7 +929,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 291,
   "fields": {
     "name": "Agi Prasetiadi",
     "last_name": null,
@@ -1004,7 +945,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 292,
   "fields": {
     "name": "Maksumov Bakir",
     "last_name": null,
@@ -1021,7 +961,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 293,
   "fields": {
     "name": "Young-Ki, Hong",
     "last_name": null,
@@ -1038,7 +977,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 294,
   "fields": {
     "name": "Kyu-Hyung Lim",
     "last_name": null,
@@ -1055,7 +993,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 295,
   "fields": {
     "name": "Kyoung-Han, Kim",
     "last_name": null,
@@ -1072,7 +1009,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 296,
   "fields": {
     "name": "Young-Hyen Jung",
     "last_name": null,
@@ -1089,7 +1025,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 297,
   "fields": {
     "name": "Kyoung-Sub, Song",
     "last_name": null,
@@ -1106,7 +1041,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 298,
   "fields": {
     "name": "Do Duy Tan",
     "last_name": null,
@@ -1123,7 +1057,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 299,
   "fields": {
     "name": "Eun-Jin, Baek",
     "last_name": null,
@@ -1140,7 +1073,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 300,
   "fields": {
     "name": "Gi-Yeop Lee",
     "last_name": null,
@@ -1157,7 +1089,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 301,
   "fields": {
     "name": "Tran Nhon",
     "last_name": null,
@@ -1174,7 +1105,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 302,
   "fields": {
     "name": "Gil-Won Lee",
     "last_name": null,
@@ -1191,7 +1121,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 303,
   "fields": {
     "name": "Byung-Chan Ahn",
     "last_name": null,
@@ -1208,7 +1137,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 304,
   "fields": {
     "name": "Young-Guy, Lim",
     "last_name": null,
@@ -1225,7 +1153,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 305,
   "fields": {
     "name": "Pham Tung Linh",
     "last_name": null,
@@ -1242,7 +1169,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 306,
   "fields": {
     "name": "Dwi Agung Nugroho",
     "last_name": null,
@@ -1259,7 +1185,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 307,
   "fields": {
     "name": "Dong-hee,Noh",
     "last_name": null,
@@ -1276,7 +1201,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 308,
   "fields": {
     "name": "YANG WEI",
     "last_name": null,
@@ -1293,7 +1217,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 309,
   "fields": {
     "name": "Pardaboy Bobonazarov Ergashovich",
     "last_name": null,
@@ -1310,7 +1233,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 310,
   "fields": {
     "name": "Pham Thi Minh Thu",
     "last_name": null,
@@ -1327,7 +1249,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 311,
   "fields": {
     "name": "Yonghyeon Kwon",
     "last_name": null,
@@ -1344,7 +1265,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 312,
   "fields": {
     "name": "Gyubaek Kim",
     "last_name": null,
@@ -1361,7 +1281,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 313,
   "fields": {
     "name": "Deokgyeong Kim",
     "last_name": null,
@@ -1378,7 +1297,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 314,
   "fields": {
     "name": "Seonggeun Hong",
     "last_name": null,
@@ -1395,7 +1313,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 315,
   "fields": {
     "name": "Tran Minh Phuong",
     "last_name": null,
@@ -1412,7 +1329,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 316,
   "fields": {
     "name": "Sardor Hojiev Qurbonboyevich",
     "last_name": null,
@@ -1429,7 +1345,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 317,
   "fields": {
     "name": "Chang-Hoon Cho",
     "last_name": null,
@@ -1446,7 +1361,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 318,
   "fields": {
     "name": "Su-Chang, Lee (IXOLOGIC Co.)",
     "last_name": null,
@@ -1463,7 +1377,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 319,
   "fields": {
     "name": "Young-Mi Heo",
     "last_name": null,
@@ -1480,7 +1393,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 320,
   "fields": {
     "name": "Lee In-Gyu",
     "last_name": null,
@@ -1497,7 +1409,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 321,
   "fields": {
     "name": "HEA-MIN LEE",
     "last_name": null,
@@ -1514,7 +1425,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 322,
   "fields": {
     "name": "Le Anh Minh",
     "last_name": null,
@@ -1531,7 +1441,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 323,
   "fields": {
     "name": "Nguyen Trong Tien",
     "last_name": null,
@@ -1548,7 +1457,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 324,
   "fields": {
     "name": "Long Bach Nguyen",
     "last_name": null,
@@ -1565,7 +1473,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 325,
   "fields": {
     "name": "In-Taek Park",
     "last_name": null,
@@ -1582,7 +1489,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 326,
   "fields": {
     "name": "Hong-Gi Jeon",
     "last_name": null,
@@ -1599,7 +1505,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 327,
   "fields": {
     "name": "Yong-Joo Ji",
     "last_name": null,
@@ -1616,7 +1521,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 328,
   "fields": {
     "name": "Sajid Mahmood",
     "last_name": null,
@@ -1633,7 +1537,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 329,
   "fields": {
     "name": "Gereziher Weldegebriel",
     "last_name": null,
@@ -1650,7 +1553,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 330,
   "fields": {
     "name": "Dong Ju Min",
     "last_name": null,
@@ -1667,7 +1569,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 331,
   "fields": {
     "name": "Ji Cheol Im",
     "last_name": null,
@@ -1684,7 +1585,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 332,
   "fields": {
     "name": "Nguyen Trong Tuan",
     "last_name": null,
@@ -1701,7 +1601,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 333,
   "fields": {
     "name": "Nguyen Tien Hai",
     "last_name": null,
@@ -1718,7 +1617,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 334,
   "fields": {
     "name": "Iyoga Don Frima Tarigan",
     "last_name": null,
@@ -1735,7 +1633,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 335,
   "fields": {
     "name": "Jin-Ju Yu",
     "last_name": null,
@@ -1752,7 +1649,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 336,
   "fields": {
     "name": "Kim junehyeok",
     "last_name": null,
@@ -1769,7 +1665,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 337,
   "fields": {
     "name": "Muhammad Rizal Khaefi",
     "last_name": null,
@@ -1786,7 +1681,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 338,
   "fields": {
     "name": "Ty-Phu Pham",
     "last_name": null,
@@ -1803,7 +1697,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 339,
   "fields": {
     "name": "Sang-Hyeon Hwang(A.D.D)",
     "last_name": null,
@@ -1820,7 +1713,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 340,
   "fields": {
     "name": "Syamsul Rizal",
     "last_name": null,
@@ -1837,7 +1729,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 341,
   "fields": {
     "name": "So Hyang Jung",
     "last_name": null,
@@ -1854,7 +1745,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 342,
   "fields": {
     "name": "Hak Hui Choi",
     "last_name": null,
@@ -1871,7 +1761,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 343,
   "fields": {
     "name": "Jin-Woo Lim (Hanwha-Systems)",
     "last_name": null,
@@ -1888,7 +1777,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 344,
   "fields": {
     "name": "Alif Akbar Pranata",
     "last_name": null,
@@ -1905,7 +1793,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 345,
   "fields": {
     "name": "Ha Yeon Lee",
     "last_name": null,
@@ -1922,7 +1809,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 346,
   "fields": {
     "name": "Hong Keu Jo",
     "last_name": null,
@@ -1939,7 +1825,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 347,
   "fields": {
     "name": "Muhammad Royyan Zahir",
     "last_name": null,
@@ -1956,7 +1841,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 348,
   "fields": {
     "name": "Mun-Seok Kang (Hanwha-Systems)",
     "last_name": null,
@@ -1973,7 +1857,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 349,
   "fields": {
     "name": "Gwan-Uk Ki (Hanwha-Systems)",
     "last_name": null,
@@ -1990,7 +1873,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 350,
   "fields": {
     "name": "Min-Seung Seo",
     "last_name": null,
@@ -2007,7 +1889,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 351,
   "fields": {
     "name": "Cheol-Jun Choi (Hanwha-Systems)",
     "last_name": null,
@@ -2024,7 +1905,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 352,
   "fields": {
     "name": "Mahmoud Ali",
     "last_name": null,
@@ -2041,7 +1921,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 353,
   "fields": {
     "name": "Muhammad Rusyadi",
     "last_name": null,
@@ -2058,7 +1937,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 354,
   "fields": {
     "name": "Jean-Claude SANGANO",
     "last_name": null,
@@ -2075,7 +1953,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 355,
   "fields": {
     "name": "Asatilla Abdukhakimov",
     "last_name": null,
@@ -2092,7 +1969,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 356,
   "fields": {
     "name": "Jong Woo Lee",
     "last_name": null,
@@ -2109,7 +1985,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 357,
   "fields": {
     "name": "Si Wan Kim",
     "last_name": null,
@@ -2126,7 +2001,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 358,
   "fields": {
     "name": "Sung Hwa Park",
     "last_name": null,
@@ -2143,7 +2017,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 359,
   "fields": {
     "name": "Trung Thanh Ngo",
     "last_name": null,
@@ -2160,7 +2033,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 360,
   "fields": {
     "name": "Rizki Rivai Ginanjar",
     "last_name": null,
@@ -2177,7 +2049,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 361,
   "fields": {
     "name": "Gyeong seon Kim",
     "last_name": null,
@@ -2194,7 +2065,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 362,
   "fields": {
     "name": "Gaspard Gashema",
     "last_name": null,
@@ -2211,7 +2081,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 363,
   "fields": {
     "name": "Sang Ho Yu",
     "last_name": null,
@@ -2228,7 +2097,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 364,
   "fields": {
     "name": "Muhammad Taufiq Ramadhan",
     "last_name": null,
@@ -2245,7 +2113,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 365,
   "fields": {
     "name": "Nita Hidayati",
     "last_name": null,
@@ -2262,7 +2129,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 366,
   "fields": {
     "name": "Heidy Indrayani",
     "last_name": null,
@@ -2279,7 +2145,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 367,
   "fields": {
     "name": "Riesa Krisna Astuti Sakir",
     "last_name": null,
@@ -2296,7 +2161,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 368,
   "fields": {
     "name": "Kevin Putra Dirgantoro",
     "last_name": null,
@@ -2313,7 +2177,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 369,
   "fields": {
     "name": "Md Sajjad Hossain",
     "last_name": null,
@@ -2330,7 +2193,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 370,
   "fields": {
     "name": "Alifia Putri Anantha",
     "last_name": null,
@@ -2347,7 +2209,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 371,
   "fields": {
     "name": "Ade Pitra Hermawan",
     "last_name": null,
@@ -2364,7 +2225,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 372,
   "fields": {
     "name": "Chi Yun Kim",
     "last_name": null,
@@ -2381,7 +2241,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 373,
   "fields": {
     "name": "Si Yeong Choi",
     "last_name": null,
@@ -2398,7 +2257,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 374,
   "fields": {
     "name": "Danielle Jaye Segui Agron",
     "last_name": null,
@@ -2415,7 +2273,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 375,
   "fields": {
     "name": "Ann Janeth Garmino Garcia",
     "last_name": null,
@@ -2432,7 +2289,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 376,
   "fields": {
     "name": "Godwin Brown Tunze",
     "last_name": null,
@@ -2449,7 +2305,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 377,
   "fields": {
     "name": "Fabliha Bushra Islam",
     "last_name": null,
@@ -2466,7 +2321,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 378,
   "fields": {
     "name": "Mareska Pratiwi Maharani",
     "last_name": null,
@@ -2483,7 +2337,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 379,
   "fields": {
     "name": "Yohana Jayanti Aruan",
     "last_name": null,
@@ -2500,7 +2353,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 380,
   "fields": {
     "name": "Syifa Maliah Rachmawati",
     "last_name": null,
@@ -2517,7 +2369,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 381,
   "fields": {
     "name": "Yusuf Abdullah Moallim",
     "last_name": null,
@@ -2534,7 +2385,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 382,
   "fields": {
     "name": "Jae-Hyun Lee",
     "last_name": null,
@@ -2551,7 +2401,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 383,
   "fields": {
     "name": "Adinda Riztia Putri",
     "last_name": null,
@@ -2568,7 +2417,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 384,
   "fields": {
     "name": "Mark Verana",
     "last_name": null,
@@ -2585,7 +2433,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 385,
   "fields": {
     "name": "Goodness Oluchi Anyanwu",
     "last_name": null,
@@ -2602,7 +2449,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 386,
   "fields": {
     "name": "Gabriel Avelino R. Sampedro (Gino)",
     "last_name": null,
@@ -2619,7 +2465,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 387,
   "fields": {
     "name": "Simeon Okechukwu Ajakwe",
     "last_name": null,
@@ -2636,7 +2481,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 388,
   "fields": {
     "name": "Revin Naufal Alief",
     "last_name": null,
@@ -2653,7 +2497,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 389,
   "fields": {
     "name": "Allwinnaldo",
     "last_name": null,
@@ -2670,7 +2513,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 390,
   "fields": {
     "name": "Muhammad Rasyid Redha Ansori",
     "last_name": null,
@@ -2687,7 +2529,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 391,
   "fields": {
     "name": "Tran Dang Hoa (PhD)",
     "last_name": null,
@@ -2704,7 +2545,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 392,
   "fields": {
     "name": "Jae Woo Kim (PhD)",
     "last_name": null,
@@ -2721,7 +2561,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 393,
   "fields": {
     "name": "Won Jae Ryu (PhD)",
     "last_name": null,
@@ -2738,7 +2577,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 394,
   "fields": {
     "name": "Xuan-Qui Pham (PhD)",
     "last_name": null,
@@ -2755,7 +2593,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 395,
   "fields": {
     "name": "Cosmas Ifeanyi Nwakanma (PhD)",
     "last_name": null,
@@ -2772,7 +2609,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 396,
   "fields": {
     "name": "Sanjay Bhardwaj (PhD)",
     "last_name": null,
@@ -2789,7 +2625,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 397,
   "fields": {
     "name": "Igboanusi Ikechi Saviour (PhD)",
     "last_name": null,
@@ -2806,7 +2641,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 398,
   "fields": {
     "name": "hyeoung-ho Bae (Microsoft Research Center)",
     "last_name": null,
@@ -2823,7 +2657,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 399,
   "fields": {
     "name": "Tae-soo Jun(Samsung Electronic Co.)",
     "last_name": null,
@@ -2840,7 +2673,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 400,
   "fields": {
     "name": "Seong Jae Park",
     "last_name": null,
@@ -2857,7 +2689,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 401,
   "fields": {
     "name": "Dong-Ick Oh (A-ZoneTech)",
     "last_name": null,
@@ -2874,7 +2705,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 402,
   "fields": {
     "name": "Seong-Cheol Heo (Samsung Heavy Industries)",
     "last_name": null,
@@ -2891,7 +2721,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 403,
   "fields": {
     "name": "Yeong-Ju Sin (Azin Information and Communication)",
     "last_name": null,
@@ -2908,7 +2737,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 404,
   "fields": {
     "name": "Seong Min Lee",
     "last_name": null,
@@ -2925,7 +2753,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 405,
   "fields": {
     "name": "JIN YONG IM",
     "last_name": null,
@@ -2942,7 +2769,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 406,
   "fields": {
     "name": "Yeong-Jin Kim (Hanwha-Systems)",
     "last_name": null,
@@ -2959,7 +2785,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 407,
   "fields": {
     "name": "Seung-pyo Ahn",
     "last_name": null,
@@ -2976,7 +2801,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 408,
   "fields": {
     "name": "Seung Han Kim",
     "last_name": null,
@@ -2993,7 +2817,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 409,
   "fields": {
     "name": "Ju-won Lee",
     "last_name": null,
@@ -3010,7 +2833,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 410,
   "fields": {
     "name": "Min Young Son",
     "last_name": null,
@@ -3027,7 +2849,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 411,
   "fields": {
     "name": "Doan Van Sang (PhD)",
     "last_name": null,
@@ -3044,7 +2865,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 412,
   "fields": {
     "name": "Tariq Rahim (PhD)",
     "last_name": null,
@@ -3061,7 +2881,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 413,
   "fields": {
     "name": "Arslan Musaddiq (PhD)",
     "last_name": null,
@@ -3078,7 +2897,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 414,
   "fields": {
     "name": "Seung Hwan Kim (PhD)",
     "last_name": null,
@@ -3095,7 +2913,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 415,
   "fields": {
     "name": "Thien Huynh-The (PhD)",
     "last_name": null,
@@ -3112,7 +2929,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 416,
   "fields": {
     "name": "Williams Paul Nwadiugwu (PhD)",
     "last_name": null,
@@ -3129,7 +2945,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 417,
   "fields": {
     "name": "Rubina Akter (PhD)",
     "last_name": null,
@@ -3146,7 +2961,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 418,
   "fields": {
     "name": "Lee Seung Min",
     "last_name": null,
@@ -3163,7 +2977,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 419,
   "fields": {
     "name": "Lee Sang A",
     "last_name": null,
@@ -3180,7 +2993,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 420,
   "fields": {
     "name": "Park Gyu Hyeon",
     "last_name": null,
@@ -3197,7 +3009,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 421,
   "fields": {
     "name": "Chang Hwan Kim",
     "last_name": null,
@@ -3214,7 +3025,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 422,
   "fields": {
     "name": "Lee Sie Young",
     "last_name": null,
@@ -3231,7 +3041,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 423,
   "fields": {
     "name": "Sang Beom, Lee",
     "last_name": null,
@@ -3248,7 +3057,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 424,
   "fields": {
     "name": "Yong Hyeon, Jeon",
     "last_name": null,
@@ -3265,7 +3073,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 425,
   "fields": {
     "name": "Jeong Seung Yun",
     "last_name": null,
@@ -3282,7 +3089,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 426,
   "fields": {
     "name": "Jeong Seung Yun",
     "last_name": null,
@@ -3299,7 +3105,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 427,
   "fields": {
     "name": "Jeong Seung Yun",
     "last_name": null,
@@ -3316,7 +3121,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 428,
   "fields": {
     "name": "Jeong Seung Yun",
     "last_name": null,
@@ -3333,7 +3137,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 429,
   "fields": {
     "name": "Ahakonye Prosper Uzoma",
     "last_name": null,
@@ -3350,7 +3153,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 430,
   "fields": {
     "name": "Ahakonye Precious Nwadiuto",
     "last_name": null,
@@ -3367,7 +3169,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 431,
   "fields": {
     "name": "Li Jinhua",
     "last_name": null,
@@ -3384,7 +3185,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 432,
   "fields": {
     "name": "Rhesa Muhammad Ramadhan (Spring, 2019)",
     "last_name": null,
@@ -3401,7 +3201,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 433,
   "fields": {
     "name": "Saurabh Mehra (From IIT, India, 2009)",
     "last_name": null,
@@ -3418,7 +3217,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 434,
   "fields": {
     "name": "Rafal Kukulski (From WUT, Poland, 2010)",
     "last_name": null,
@@ -3435,7 +3233,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 435,
   "fields": {
     "name": "Tran Tuan Anh (From HUST, Vietnam, 2011)",
     "last_name": null,
@@ -3452,7 +3249,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 436,
   "fields": {
     "name": "Dong-Seong Kim",
     "last_name": null,
@@ -3469,7 +3265,6 @@
 },
 {
   "model": "members.bio",
-  "pk": 437,
   "fields": {
     "name": "Jae-Min Lee",
     "last_name": null,
