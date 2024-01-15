@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% load bootstrap5 %}
+
+{% block content %}
+{% include 'partials/_banner.html' with heading="Report" %}
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-lg-3 d-sm-none d-md-block ">
+            {% include 'partials/_works.html' %}
+        </div>
+        <div class="col-lg-9">
+    <div class="report-container card bg-light p-4 rounded shadow">
+        <div class="card-header bg-info">
+            <h1 class="mb-4">
+                {% if report.user %}
+                                    {{ report.user|capfirst  }}
+                                {% else %}
+                                    {{ report.writer|capfirst }}
+                                {% endif %}
+            </h1>
+            <h2 class="mb-4">{{ report.fr_dt|date:'F j, Y' }} - {{ report.to_dt|date:'F j, Y' }}</h2>
+        </div>
+
+        <div class="card-body">
+            <h5 class="mb-3 card-text">Paper Progress</h5>
+            <div class="progress mb-3">
+                <div class="progress-bar progress-bar-striped bg-info" style="width: {{ report.paper_prog_percent }}%;"></div>
+            </div>
+            <p>{{ report.paper_progress }}</p>
+
+            <h5 class="mb-3 card-text">Last Week's Paper</h5>
+            <p class="card-text">{{ report.paper_last_wk }}</p>
+
+            <h5 class="mb-3 card-text">This Week's Paper</h5>
+            <p>{{ report.paper_this_wk }}</p>
+
+            <h5 class="mb-3">Project Progress</h5>
+            <div class="progress">
+                <div class="progress-bar progress-bar-striped bg-info" style="width: {{ report.project_prog_percent }}%"></div>
+            </div>
+            <p>{{ report.project_progress }}</p>
+
+            <h5 class="mb-3 card-text">Last Week's Project</h5>
+            <p>{{ report.project_last_wk }}</p>
+
+            <h5 class="mb-3 card-text">This Week's Project</h5>
+            <p>{{ report.project_this_wk }}</p>
+
+            <h5 class="mb-3 card-text">Monthly Goals</h5>
+            <p>{{ report.mnth_gls }}</p>
+
+            <h5 class="mb-3 card-text">Annual Goals</h5>
+            <p>{{ report.annl_gls }}</p>
+        </div>
+
+        <div class="card-footer">
+            <p class="mb-0">Report by: {{ report.writer|capfirst }}</p>
+        </div>
+        
+    </div>
+    </div>
+    </div>
+</div>
+{% endblock %}

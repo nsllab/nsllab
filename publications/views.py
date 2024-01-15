@@ -1,4 +1,5 @@
 from django.shortcuts import render, get_object_or_404, redirect
+from django.core.paginator import Paginator
 from .models import Journal, Conference
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
@@ -41,9 +42,13 @@ def journals(request):
     #     journals = journals.filter(
     #         Q(title__icontains=query) | Q(write_date__icontains=query)
     #     )
+    
+    paginator = Paginator(journals, 50)
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
 
     context = {
-        'journals': journals,
+        'journals': page_obj,
         'journal_type': PAPER_TYPE,
         'status': PAPER_STATUS,
     }
@@ -134,8 +139,12 @@ def conferences(request):
         if status:
             conferences = conferences.filter(status__iexact=status)
 
+    paginator = Paginator(conferences, 50)
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
+
     context = {
-        'conferences': conferences,
+        'conferences': page_obj,
         'journal_type': PAPER_TYPE,
         'status': PAPER_STATUS,
     }
