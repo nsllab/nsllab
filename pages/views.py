@@ -11,3 +11,8 @@ def index(request):
         'total': len(profs)
         }
     return render(request, 'pages/index.html', context)
+
+def serendipity(request):
+
+    context = {}
+    return render(request, 'pages/serendipity.html', context)
