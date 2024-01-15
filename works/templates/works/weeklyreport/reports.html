@@ -15,6 +15,7 @@
                     <th>Date</th>
                     <!-- <th>Author</th> --> 
                     <th>By</th>
+                    <!-- <th>Actions</th> -->
                 </thead>
                 <tbody>
                     {% for report in reports %}
@@ -30,6 +31,11 @@
                                 {{ report.writer|capfirst }}
                             {% endif %}
                         </td>
+                        {% if user.is_staff or report.user == user %}
+                        <td>
+                            <a href="{% url 'works:update' pk=report.pk %}" class="btn btn-outline-info">Edit</a>
+                        </td>
+                        {% endif %}
                     </tr>
                     {% endfor %}
                 </tbody>

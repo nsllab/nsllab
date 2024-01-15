@@ -33,3 +33,15 @@ class WeeklyReportDetailView(DetailView):
     model = WeeklyReport
     template_name = 'works/weeklyreport/details.html'
     context_object_name = 'report'
+
+class WeeklyReportUpdateView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
+    login_url = "/members/login/"
+    model = WeeklyReport
+    form_class = WeeklyReportForm
+    template_name = 'works/weeklyreport/update.html'
+    success_url = reverse_lazy('works:weekly_reports')
+    success_message =  "Updated successfully"
+
+    def form_valid(self, form):
+        form.instance.writer = self.request.user
+        return super().form_valid(form)
