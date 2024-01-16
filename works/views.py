@@ -1,11 +1,11 @@
 from django.shortcuts import render
-from .models import WeeklyReport
+from .models import WeeklyReport, PostDocReport
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.messages.views import SuccessMessageMixin
 from django.views.generic import CreateView, UpdateView, DetailView
 from django.urls import reverse_lazy
 from django.contrib import messages
-from .forms import WeeklyReportForm
+from .forms import WeeklyReportForm, PostDocReportForm
 
 # Create your views here.
 
@@ -22,7 +22,7 @@ class WeeklyReportCreateView(LoginRequiredMixin, SuccessMessageMixin, CreateView
     model = WeeklyReport
     form_class = WeeklyReportForm  # Replace with your actual form
     template_name = 'works/weeklyreport/create.html'  # Replace with your template name
-    success_url = reverse_lazy('publications:conferences')  # Replace with your success URL
+    success_url = reverse_lazy('works:weekly_reports')  # Replace with your success URL
     success_message =  "Report added successfully"
 
     def form_valid(self, form):
@@ -45,3 +45,41 @@ class WeeklyReportUpdateView(LoginRequiredMixin, SuccessMessageMixin, UpdateView
     def form_valid(self, form):
         form.instance.writer = self.request.user
         return super().form_valid(form)
+
+
+def post_doc_reports(request):
+    wr = PostDocReport.objects.all().order_by('-fr_dt')
+    context = {
+        'reports': wr
+    }
+    return render(request, 'works/weeklyreport/post_doc_reports.html', context)
+
+class PostDocReportCreateView(LoginRequiredMixin, SuccessMessageMixin, CreateView):
+    login_url="/members/login"
+    model = PostDocReport
+    form_class = PostDocReportForm  # Replace with your actual form
+    template_name = 'works/weeklyreport/post_doc_create.html'  # Replace with your template name
+    success_url = reverse_lazy('works:post_doc_reports')  # Replace with your success URL
+    success_message =  "Report added successfully"
+
+    def form_valid(self, form):
+        form.instance.writer = self.request.user  # Set the writer to the current user
+        return super().form_valid(form)
+
+class PostDocReportDetailView(DetailView):
+    model = PostDocReport
+    template_name = 'works/weeklyreport/post_doc_details.html'
+    context_object_name = 'report'
+
+class PostReportUpdateView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
+    login_url = "/members/login/"
+    model = PostDocReport
+    form_class = PostDocReportForm
+    template_name = 'works/weeklyreport/post_doc_update.html'
+    success_url = reverse_lazy('works:post_doc_reports')
+    success_message =  "Updated successfully"
+
+    def form_valid(self, form):
+        form.instance.writer = self.request.user
+        return super().form_valid(form)
+

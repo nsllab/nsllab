@@ -32,4 +32,14 @@ class WeeklyReport(models.Model):
     user = models.CharField(null=True, blank=True)
     writer = models.ForeignKey(Member, on_delete=models.DO_NOTHING, related_name='reports', default=get_default_user)
     is_post_doc = models.BooleanField("Post Doc?",default=False)
-    # pass
+
+
+class PostDocReport(models.Model):
+    fr_dt = models.DateTimeField("From Date", default=timezone.now)
+    to_dt = models.DateTimeField("Till", default=default_from_date)
+    paper_progress = models.TextField("Paper Progress")
+    project_progress = models.TextField("Project Progress")
+    mnth_gls = models.TextField("Monthly Goals")
+    annl_gls = models.TextField("Annual Goals")
+    user = models.CharField(null=True, blank=True)
+    writer = models.ForeignKey(Member, on_delete=models.DO_NOTHING, related_name='post_doc_reports', default=get_default_user)

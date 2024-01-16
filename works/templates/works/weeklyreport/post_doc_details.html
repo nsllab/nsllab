@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load bootstrap5 %}
+
+{% block content %}
+{% include 'partials/_banner.html' with heading="Weekly Report Detail (Post Doc)" %}
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-lg-3 d-sm-none d-md-block ">
+            {% include 'partials/_works.html' %}
+        </div>
+        <div class="col-lg-9">
+    <div class="report-container card bg-light p-4 rounded shadow">
+        <div class="card-header bg-info">
+            <h1 class="mb-4">
+                {% if report.user %}
+                                    {{ report.user|capfirst  }}
+                                {% else %}
+                                    {{ report.writer|capfirst }}
+                                {% endif %}
+            </h1>
+            <h2 class="mb-4">{{ report.fr_dt|date:'F j, Y' }} - {{ report.to_dt|date:'F j, Y' }}</h2>
+        </div>
+
+        <div class="card-body">
+            <h5 class="mb-3 card-text bg-info p-2">Papers</h5>
+            <p class="carad-text">{{ report.paper_progress|linebreaksbr  }}</p>
+
+
+            <h5 class="mb-3 card-text bg-info p-2">Project Progress</h5>
+            
+            <p class="card-text">{{ report.project_progress|linebreaksbr }}</p>
+
+            <h5 class="mb-3 card-text bg-info p-2">Monthly Goals</h5>
+            <p>{{ report.mnth_gls|linebreaksbr }}</p>
+
+            <h5 class="mb-3 card-text">Annual Goals</h5>
+            <p class="card-text">{{ report.annl_gls|linebreaksbr }}</p>
+        </div>
+
+        <div class="card-footer">
+            <p class="mb-0">Report by: {{ report.writer|capfirst }}</p>
+        </div>
+        
+    </div>
+    </div>
+    </div>
+</div>
+{% endblock %}

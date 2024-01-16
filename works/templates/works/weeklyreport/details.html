@@ -22,35 +22,37 @@
         </div>
 
         <div class="card-body">
-            <h5 class="mb-3 card-text">Paper Progress</h5>
+            <h5 class="mb-3 card-text bg-info p-3">Papers</h5>
+            <p class="carad-text">{{ report.paper_progress|linebreaksbr  }}</p>
             <div class="progress mb-3">
-                <div class="progress-bar progress-bar-striped bg-info" style="width: {{ report.paper_prog_percent }}%;"></div>
+                <div class="progress-bar progress-bar-striped bg-info" style="width: {{ report.paper_prog_percent }}%;">{{ report.paper_prog_percent }}% Progress</div>
             </div>
-            <p>{{ report.paper_progress|linebreaksbr  }}</p>
 
-            <h5 class="mb-3 card-text">Last Week's Paper </h5>
+            <h5 class="mb-3 card-text bg-info p-3">Last Week's Progress </h5>
             <p class="card-text">{{ report.paper_last_wk|linebreaksbr  }}</p>
 
-            <h5 class="mb-3 card-text">This Week's Paper</h5>
-            <p>{{ report.paper_this_wk|linebreaksbr }}</p>
+            <h5 class="mb-3 card-text bg-info p-3">This Week Todo's</h5>
+            <p class="card-text">{{ report.paper_this_wk|linebreaksbr }}</p>
 
-            <h5 class="mb-3">Project Progress</h5>
-            <div class="progress">
-                <div class="progress-bar progress-bar-striped bg-info" style="width: {{ report.project_prog_percent }}%"></div>
+            <h5 class="mb-3 card-text bg-info p-3">Project Progress</h5>
+            
+            <p class="card-text">{{ report.project_progress|linebreaksbr }}</p>
+
+            <div class="progress mb-3">
+                <div class="progress-bar progress-bar-striped bg-info" style="width: {{ report.project_prog_percent }}%;">{{ report.project_prog_percent }}% Progress</div>
             </div>
-            <p>{{ report.project_progress|linebreaksbr }}</p>
 
             <h5 class="mb-3 card-text">Last Week's Project</h5>
-            <p>{{ report.project_last_wk|linebreaksbr }}</p>
+            <p class="card-text">{{ report.project_last_wk|linebreaksbr }}</p>
 
             <h5 class="mb-3 card-text">This Week's Project</h5>
-            <p>{{ report.project_this_wk|linebreaksbr }}</p>
+            <p class="card-text">{{ report.project_this_wk|linebreaksbr }}</p>
 
             <h5 class="mb-3 card-text">Monthly Goals</h5>
             <p>{{ report.mnth_gls|linebreaksbr }}</p>
 
             <h5 class="mb-3 card-text">Annual Goals</h5>
-            <p>{{ report.annl_gls|linebreaksbr }}</p>
+            <p class="card-text">{{ report.annl_gls|linebreaksbr }}</p>
         </div>
 
         <div class="card-footer">
