@@ -1,5 +1,5 @@
 from django import forms
-from .models import Journal, Conference
+from .models import Journal, Conference, Patent
 
 class JournalForm(forms.ModelForm):
     class Meta:
@@ -34,3 +34,8 @@ class ConferenceUpdateForm(forms.ModelForm):
         # widgets = {
         #     'ack': forms.TextInput(attrs={'required': False}),
         # }
+
+class PatentForm(forms.ModelForm):
+    class Meta:
+        model = Patent
+        fields = ['subject', 'content', 'patent_type']

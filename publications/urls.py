@@ -13,4 +13,7 @@ urlpatterns = [
     path('conferences/create', views.ConferenceCreateView.as_view(), name='conference_create'),
     path('conferences/update/<int:pk>', views.ConferenceUpdateView.as_view(), name='conference_update'),
     path('conferences/<int:pk>', views.ConferenceDetailView.as_view(), name='conference_detail'),
+
+    path('patents', views.patents, name="patents"),
+    path('patents/<int:pk>/update', views.PatentUpdateView.as_view(), name="patent_update"),
 ]

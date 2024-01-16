@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Journal, Conference
+from .models import Journal, Conference, Patent
 # Register your models here.
 
 class JournalAdmin(admin.ModelAdmin):
@@ -10,5 +10,9 @@ class ConferenceAdmin(admin.ModelAdmin):
     search_fields = ['conference_type']
     list_display = ('id', 'title', 'conference_type',)
 
+class PatentAdmin(admin.ModelAdmin):
+    list_filter = ('patent_type',)
+
 admin.site.register(Conference, ConferenceAdmin)
 admin.site.register(Journal, JournalAdmin)
+admin.site.register(Patent, PatentAdmin)

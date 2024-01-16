@@ -45,3 +45,16 @@ class Conference(models.Model):
     extras = models.CharField(max_length=50, null=True, blank=True)
     all_authors = models.CharField(max_length=200, null=True, blank=True)
     file = models.FileField(upload_to='conference/', null=True, blank=True)
+
+
+class Patent(models.Model):
+    subject = models.CharField(max_length=150, null=False)
+    content = models.TextField()
+    status = models.IntegerField(null=True)
+    write_date = models.DateTimeField(default=timezone.now, null=True)
+    update_date = models.DateTimeField(default=timezone.now, null=True)
+    ref = models.CharField(max_length=100, null=True, blank=True)
+    writer = models.CharField(max_length=100, null=False)
+    visit = models.IntegerField(default=1)
+    tcp_ip = models.CharField(max_length=100, null=True)
+    patent_type = models.IntegerField(choices=PAPER_TYPE, default=1, null=True)

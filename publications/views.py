@@ -1,9 +1,9 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.core.paginator import Paginator
-from .models import Journal, Conference
+from .models import Journal, Conference, Patent
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
-from .forms import JournalForm, JournalUpdateForm, ConferenceForm, ConferenceUpdateForm
+from .forms import JournalForm, JournalUpdateForm, ConferenceForm, PatentForm, ConferenceUpdateForm
 from django.contrib.messages.views import SuccessMessageMixin
 from django.views.generic import CreateView, UpdateView, DetailView
 from .choices import PAPER_STATUS, PAPER_TYPE
@@ -182,22 +182,67 @@ class ConferenceDetailView(DetailView):
     template_name = 'publications/conferences/conference_details.html'
     context_object_name = 'conference'
 
-@login_required(login_url="/members/login")
-def conference_update(request, pk):
-    conference = get_object_or_404(Conference, pk=pk)
+# @login_required(login_url="/members/login")
+# def conference_update(request, pk):
+#     conference = get_object_or_404(Conference, pk=pk)
 
-    if request.method == 'POST':
-        form = ConferenceUpdateForm(request.POST, request.FILES, instance=conference)
+#     if request.method == 'POST':
+#         form = ConferenceUpdateForm(request.POST, request.FILES, instance=conference)
         
-        if form.is_valid():
-            form.save()
-            messages.add_message(request, messages.SUCCESS, 'Update Successful')
-            return redirect('publications:conferences')
-    else:
-        form = ConferenceUpdateForm(instance=conference)
+#         if form.is_valid():
+#             form.save()
+#             messages.add_message(request, messages.SUCCESS, 'Update Successful')
+#             return redirect('publications:conferences')
+#     else:
+#         form = ConferenceUpdateForm(instance=conference)
+
+#     context = {
+#         'form': form,
+#     }
+
+#     return render(request, 'publications/conferences/update.html', context)
+
+
+def patents(request):
+    patents = Patent.objects.order_by('-write_date')
+    search = request.GET
+
+    if 'year' in search:
+        year = search['year']
+        if year:
+            journals = journals.filter(write_date__icontains=year)
+
+    if 'subject' in search:
+        subject = search['subject']
+        if subject:
+            patents = patents.filter(subject__icontains=subject)
+
+    if 'year' in search:
+        year = search['year']
+        if year:
+            patents = patents.filter(write_date__iexact=year)
+
+    if 'patent_type' in search:
+        patent_type = search['patent_type']
+        if patent_type:
+            patents = patents.filter(patent_type__iexact=patent_type)
+
+    # international_patents = patents.filter(patent_type=1)
+    # domestic_patents = patents.filter(patent_type=2)
 
     context = {
-        'form': form,
+        'patents': patents,
+        'patent_type': PAPER_TYPE
+        # 'dom_pats': domestic_patents,
     }
 
-    return render(request, 'publications/conferences/update.html', context)
+    return render(request, 'publications/patents/patent_lists.html', context)
+
+
+class PatentUpdateView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
+    login_url = "/members/login/"
+    model = Patent
+    form_class = PatentForm
+    template_name = 'publications/patents/update.html'
+    success_url = reverse_lazy('publications:patents')
+    success_message =  "Updated successfully"
