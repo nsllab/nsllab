@@ -71,23 +71,23 @@ def serendipity_update(request, pk):
 
 
 
-# class SerendipityCreateView(LoginRequiredMixin, SuccessMessageMixin, CreateView):
-#     login_url="/members/login"
-#     model = Serendipity
-#     form_class = SerendipityForm  # Replace with your actual form
-#     # template_name = 'pages/serendipity/serendipity/create.html'  # Replace with your template name
-#     success_url = reverse_lazy('pages:serendipity')  # Replace with your success URL
-#     success_message =  "Serendipity added successfully"
+class SerendipityCreateView(LoginRequiredMixin, SuccessMessageMixin, CreateView):
+    login_url="/members/login"
+    model = Serendipity
+    form_class = SerendipityForm  # Replace with your actual form
+    template_name = ''  # Replace with your template name
+    success_url = reverse_lazy('pages:serendipity')  # Replace with your success URL
+    success_message =  "Serendipity added successfully"
 
-#     def form_valid(self, form):
-#         form.instance.writer = self.request.user  # Set the writer to the current user
-#         return super().form_valid(form)
+    def form_valid(self, form):
+        form.instance.writer = self.request.user  # Set the writer to the current user
+        return super().form_valid(form)
 
 
-# class SerendipityUpdateView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
-#     login_url = "/members/login/"
-#     model = Serendipity
-#     form_class = SerendipityForm
-#     # template_name = 'pages/serendipity/update.html'
-#     success_url = reverse_lazy('pages:serendipity')
-#     success_message =  "Updated successfully"
+class SerendipityUpdateView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
+    login_url = "/members/login/"
+    model = Serendipity
+    form_class = SerendipityForm
+    template_name = ''
+    success_url = reverse_lazy('pages:serendipity')
+    success_message =  "Updated successfully"

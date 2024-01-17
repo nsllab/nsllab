@@ -58,7 +58,7 @@ class JournalCreateView(LoginRequiredMixin, SuccessMessageMixin, CreateView):
     login_url = "/members/login/"
     model = Journal
     form_class = JournalForm  # Replace with your actual form
-    template_name = 'publications/journals/create.html'  # Replace with your template name
+    template_name = ''  # publications/journals/create.html
     success_url = reverse_lazy('publications:journals')  # Replace with your success URL
     success_message =  "%(journal_name)s created successfully"
 
@@ -239,7 +239,7 @@ class PatentCreateView(LoginRequiredMixin, SuccessMessageMixin, CreateView):
     login_url="/members/login"
     model = Patent
     form_class = PatentForm  # Replace with your actual form
-    template_name = 'publications/patents/create.html'  # Replace with your template name
+    template_name = ''  # Replace with your template name
     success_url = reverse_lazy('publications:patents')  # Replace with your success URL
     success_message =  "Patent added successfully"
 

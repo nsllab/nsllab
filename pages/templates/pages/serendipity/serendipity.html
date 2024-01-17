@@ -3,11 +3,17 @@
 <div class="container mt-5">
     {% if user.is_authenticated %}
     <div class="row">
-        <div class="col-sm-6">
-            <form method="POST" action="{% url 'pages:serendipity_create' %}">
+        <div class="col-sm-6 card">
+            <div class="card-body">
+              <h5 class="card-title">Add Serendipity</h5>
+              <form method="POST" action="{% url 'pages:serendipity_create' %}">
                 {% csrf_token %}
-                <div class="">
-                  <input type="text" name="subject" value="{{ subject }}" class="form-control mb-2" placeholder="Serenpidity" />
+                <!-- <div class="">
+                  <input type="text" name="subject" value="{{ subject }}" class="form-control mb-2" placeholder="Serendipity" />
+                </div> -->
+                <div class="form-floating mb-2">
+                  <textarea class="form-control" name="subject" value="{{ subject }}" placeholder="subject" id="subject" style="height: 80px;"></textarea>
+                  <label for="content">Serendipity</label>
                 </div>
                 <!-- <div class="">
                   <input type="text" name="year" value="{{ year }}" class="form-control mb-2" placeholder="By year" />
@@ -19,6 +25,7 @@
                   </button>
                 </div>
               </form>
+            </div>
         </div>
     </div>
     {% endif %}
@@ -54,7 +61,7 @@
             
             {% if user == seren.writer or user.is_staff %}
             <td>
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editModal{{ seren.id }}">
+                <button type="button" class="btn btn-outline-info" data-bs-toggle="modal" data-bs-target="#editModal{{ seren.id }}">
                     Edit
                 </button>
               <!-- <a
@@ -70,7 +77,7 @@
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="editModalLabel{{ seren.pk }}">Edit {{ seren.subject }}</h5>
+                        <h5 class="modal-title" id="editModalLabel{{ seren.pk }}">Edit</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
@@ -81,7 +88,7 @@
                                 <label for="subject{{ seren.pk }}" class="form-label">Serendipity</label>
                                 <input type="text" class="form-control" id="subject{{ seren.pk }}" name="subject" value="{{ seren.subject }}">
                             </div>
-                            <button type="submit" class="btn btn-primary">Save Changes</button>
+                            <button type="submit" class="btn btn-info">Save Changes</button>
                         </form>
                     </div>
                 </div>
@@ -177,12 +184,11 @@
 </div>
 </div>
 
-{% if user.is_authenticated %}
+<!-- {% if user.is_authenticated %}
 <div class="position-fixed bottom-0 end-0 p-3">
     <a href="{% url 'publications:patent_create' %}" class="btn btn-outline-info" type="button">
         <i class="fa-solid fa-plus"></i> Add Patent
-	  <!-- Bootstrap Icons -->
 	</a>
   </div>
-{% endif %}
+{% endif %} -->
 {% endblock %}

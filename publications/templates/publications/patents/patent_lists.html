@@ -1,6 +1,48 @@
 {% extends 'base.html' %} {% load bootstrap5 %} {% block content %}
 {% include 'partials/_banner.html' with heading="Patents" %}
 <div class="container mt-5">
+  {% if user.is_authenticated %}
+    <div class="row">
+        <div class="col-sm-6 card">
+            <div class="card-body">
+              <h5 class="card-title">Add Patent</h5>
+              <form class="" method="POST" action="{% url 'publications:patent_create' %}">
+                {% csrf_token %}
+                <div class="form-floating">
+                  <input type="text" name="subject" value="{{ subject }}" class="form-control mb-2" placeholder="Patent" />
+                  <label for="subject">Subject</label>
+                </div>
+                <div class="form-floating">
+                  <textarea class="form-control" name="content" value="{{ content }}" placeholder="Content" id="content" style="height: 100px;"></textarea>
+                  <label for="content">Comments</label>
+                </div>
+                <select class="form-select my-2" name="patent_type">
+                  <option selected="true" disabled="disabled">Patent Type</option>
+                  {% for value in patent_type %}
+                    <option 
+                      value="{{ value.0 }}"
+                      {% if value.0 == patent_type %}
+                                    selected
+                                 {% endif %}
+                      >
+                      {{ value.1 }}
+                    </option>
+                  {% endfor %}
+                </select>
+                <!-- <div class="">
+                  <input type="text" name="year" value="{{ year }}" class="form-control mb-2" placeholder="By year" />
+                </div> -->
+                
+                <div class="d-grid gap-2">
+                  <button type="submit" class="btn btn-outline-info">
+                    <i class="fa-solid fa-plus"></i> Add Patent
+                  </button>
+                </div>
+              </form>
+            </div>
+        </div>
+    </div>
+    {% endif %}
   <div class="row">
     <div class="col-sm-10">
         {% if patents %}
@@ -28,18 +70,61 @@
             <td>{{ patent.get_status_display }}</td>
 			      <td>{{ patent.get_patent_type_display }}</td>
             
-            {% if user.is_authenticated %}
+            {% if user == seren.writer or user.is_staff %}
             <td>
-              <a
+              <!-- <a
                 href="{% url 'publications:patent_update' pk=patent.pk %}"
                 class="btn btn-outline-info"
-                >Edit</a
-              >
+                >Edit</a> -->
+                <button type="button" class="btn btn-outline-info" data-bs-toggle="modal" data-bs-target="#editModal{{ patent.pk }}">
+                  Edit
+              </button>
             </td>
+            
             {% endif %}
           </tr>
           
-
+          <!-- Modal for each item -->
+          <div class="modal fade" id="editModal{{ patent.pk }}" tabindex="-1" aria-labelledby="editModalLabel{{ patent.pk }}" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="editModalLabel{{ patent.pk }}">Edit</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- Add a form for editing the specific field -->
+                        <form method="POST" action="{% url 'publications:patent_update' patent.pk %}">
+                            {% csrf_token %}
+                            <div class="">
+                              <label for="subject{{ patent.pk }}">Subject</label>
+                              <input type="text" id="subject{{ patent.pk }}" name="subject" value="{{ patent.subject }}" class="form-control mb-2" placeholder="Patent" />
+                              
+                            </div>
+                            <div class="">
+                              <label for="content{{ patent.pk }}">Content</label>
+                              <textarea class="form-control" name="content" placeholder="Content" id="content{{ patent.pk }}" style="height: 100px">{{ patent.content }}</textarea>
+                              
+                          </div>
+                          <select class="form-select my-2" name="patent_type">
+                            <option selected="true" disabled="disabled">Patent Type</option>
+                            {% for value in patent_type %}
+                                <option 
+                                    value="{{ value.0 }}"
+                                    {% if value.0 == patent.patent_type %}
+                                        selected
+                                    {% endif %}
+                                >
+                                    {{ value.1 }}
+                                </option>
+                            {% endfor %}
+                        </select>
+                            <button type="submit" class="btn btn-info">Save Changes</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
           {% endfor %}
         </tbody>
       </table>
@@ -56,9 +141,6 @@
             <div class="">
               <input type="text" name="subject" value="{{ subject }}" class="form-control mb-2" placeholder="By Subject" />
             </div>
-            <!-- <div class="">
-              <input type="text" name="writer" value="{{ writer }}" class="form-control mb-2" placeholder="By username" />
-            </div> -->
             <div class="">
               <input type="text" name="year" value="{{ year }}" class="form-control mb-2" placeholder="By year" />
             </div>
@@ -148,12 +230,11 @@
 </div>
 </div>
 
-{% if user.is_authenticated %}
+<!-- {% if user.is_authenticated %}
 <div class="position-fixed bottom-0 end-0 p-3">
     <a href="{% url 'publications:patent_create' %}" class="btn btn-outline-info" type="button">
         <i class="fa-solid fa-plus"></i> Add Patent
-	  <!-- Bootstrap Icons -->
 	</a>
   </div>
-{% endif %}
+{% endif %} -->
 {% endblock %}
