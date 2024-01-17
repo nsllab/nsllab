@@ -1,6 +1,11 @@
 
 
 /* Custom styles for the navbar */
+
+.btn-outline-info:hover {
+    color: #fff !important;
+}
+
 .navbar {
     background-color: transparent; /* Dark background color */
     z-index: 1000;

@@ -4,12 +4,11 @@ from .models import WeeklyReport, PostDocReport
 
 
 class WeeklyReportAdmin(admin.ModelAdmin):
-    list_display = ('is_post_doc', 'user', 'writer',)
-    list_filter = ('is_post_doc',)
+    list_display = ('user', 'writer',)
     # search_fields = ['name', 'position']
 
 class PostDocReportAdmin(admin.ModelAdmin):
-    list_display = ('user',)
+    list_display = ('user', 'writer')
     
 admin.site.register(WeeklyReport, WeeklyReportAdmin)
 admin.site.register(PostDocReport, PostDocReportAdmin)
