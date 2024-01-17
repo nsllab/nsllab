@@ -11,11 +11,11 @@ def get_default_user():
 
 class Serendipity(models.Model):
     user = models.CharField(null=True, blank=True)
-    subject = models.CharField("Serendipity", max_length=200)
+    subject = models.TextField("Serendipity", max_length=600)
     visit = models.IntegerField(null=True)
     write_date = models.DateTimeField(default=timezone.now, null=True)
     update_date = models.DateTimeField(default=timezone.now, null=True)
     ref = models.CharField(max_length=100, null=True, blank=True)
-    tcp_ip = models.CharField(max_length=100, null=True)
+    tcp_ip = models.CharField(max_length=120, null=True)
     writer = models.ForeignKey(Member, on_delete=models.DO_NOTHING, related_name='serendipity', default=get_default_user)
     
