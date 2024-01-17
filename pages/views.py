@@ -42,13 +42,10 @@ def serendipity(request):
 def serendipity_create(request):
     if request.method == 'POST':
         form = SerendipityForm(request.POST)
-        print(form.is_valid)
         if form.is_valid():
-            print('valid')
             form_instance = form.save(commit=False)
             form_instance.writer = request.user
             form_instance.save()
-            print('save')
             return redirect('pages:serendipity')
         
     else:
