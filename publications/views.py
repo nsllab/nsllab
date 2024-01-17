@@ -207,11 +207,6 @@ def patents(request):
     patents = Patent.objects.order_by('-write_date')
     search = request.GET
 
-    if 'year' in search:
-        year = search['year']
-        if year:
-            journals = journals.filter(write_date__icontains=year)
-
     if 'subject' in search:
         subject = search['subject']
         if subject:
@@ -220,7 +215,7 @@ def patents(request):
     if 'year' in search:
         year = search['year']
         if year:
-            patents = patents.filter(write_date__iexact=year)
+            patents = patents.filter(write_date__icontains=year)
 
     if 'patent_type' in search:
         patent_type = search['patent_type']
@@ -237,6 +232,20 @@ def patents(request):
     }
 
     return render(request, 'publications/patents/patent_lists.html', context)
+
+
+
+class PatentCreateView(LoginRequiredMixin, SuccessMessageMixin, CreateView):
+    login_url="/members/login"
+    model = Patent
+    form_class = PatentForm  # Replace with your actual form
+    template_name = 'publications/patents/create.html'  # Replace with your template name
+    success_url = reverse_lazy('publications:patents')  # Replace with your success URL
+    success_message =  "Patent added successfully"
+
+    def form_valid(self, form):
+        form.instance.writer = self.request.user  # Set the writer to the current user
+        return super().form_valid(form)
 
 
 class PatentUpdateView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):

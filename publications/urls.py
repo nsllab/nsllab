@@ -16,4 +16,5 @@ urlpatterns = [
 
     path('patents', views.patents, name="patents"),
     path('patents/<int:pk>/update', views.PatentUpdateView.as_view(), name="patent_update"),
+    path('patents/create', views.PatentCreateView.as_view(), name="patent_create"),
 ]
